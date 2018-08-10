@@ -18,7 +18,7 @@ class Form extends Component {
             h2 = <h2>
                     <span class="line">Sign up for</span>&nbsp;<span class="line">the TLC newsletter</span>
                 </h2>;
-            input = <Input placeholder="enter email address" className="full-width" val={ signUpState.userInfo.email } handleChange={ updateEmail }/>;
+            input = <Input placeholder="enter email address" type="email" className="full-width" val={ signUpState.userInfo.email } handleChange={ updateEmail }/>;
             button = <Button title="next" onclick={ updateFormState } data="name"/>
             disclaimer = <div id="disclaimer">
                             <label class="checkbox-wrapper">
