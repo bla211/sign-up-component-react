@@ -57,6 +57,9 @@ html {
 .collapsed {
   visibility: hidden; }
 
+#sign-up-form h2 .line, #sign-up-form h3 .line, #sign-up-form h4 .line {
+  display: inline-block; }
+
 #sign-up-form {
   width: 100%;
   float: left;
@@ -65,7 +68,7 @@ html {
   #sign-up-form h1 {
     font-family: 'elaine_d02_regularregular';
     color: #B6FDBF;
-    font-size: 2.3em;
+    font-size: 2em;
     margin: 0 0 14px 0;
     width: 100%;
     text-align: center;
@@ -79,8 +82,23 @@ html {
     text-transform: uppercase;
     line-height: 1.25em;
     margin-bottom: 10px; }
-    #sign-up-form h2 .line {
-      display: inline-block; }
+  #sign-up-form h3 {
+    font-family: 'azo_sansbold';
+    color: #94AEBF;
+    font-size: 1.25em;
+    width: 100%;
+    text-align: center;
+    text-transform: capitalize;
+    line-height: 1.25em;
+    margin-bottom: 30px;
+    padding: 0 20px; }
+  #sign-up-form h4 {
+    font-family: 'azo_sanslight';
+    color: #94AEBF;
+    font-size: 1.15em;
+    width: 100%;
+    text-align: center;
+    line-height: 1.25em; }
   #sign-up-form #input-wrapper {
     display: flex;
     justify-content: space-between; }
@@ -130,3 +148,56 @@ html {
     padding: 12px 0;
     text-transform: uppercase;
     cursor: pointer; }
+  #sign-up-form #disclaimer {
+    padding: 0 12px; }
+    #sign-up-form #disclaimer .checkbox-wrapper {
+      display: block;
+      position: relative;
+      padding-left: 35px;
+      margin-bottom: 12px;
+      cursor: pointer;
+      font-size: 22px;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none; }
+      #sign-up-form #disclaimer .checkbox-wrapper:hover input ~ .checkmark {
+        background-color: #ccc; }
+      #sign-up-form #disclaimer .checkbox-wrapper input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer; }
+        #sign-up-form #disclaimer .checkbox-wrapper input:checked ~ .checkmark {
+          background-color: #FFFFFF; }
+          #sign-up-form #disclaimer .checkbox-wrapper input:checked ~ .checkmark:after {
+            display: block; }
+      #sign-up-form #disclaimer .checkbox-wrapper .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 12px;
+        width: 12px;
+        background-color: #eee;
+        border: 1px solid #9B9B9B;
+        border-radius: 2px; }
+        #sign-up-form #disclaimer .checkbox-wrapper .checkmark:after {
+          content: "";
+          position: absolute;
+          display: none;
+          left: 3px;
+          top: -1px;
+          width: 5px;
+          height: 10px;
+          border: solid black;
+          border-width: 0 2px 2px 0;
+          -webkit-transform: rotate(45deg);
+          -ms-transform: rotate(45deg);
+          transform: rotate(45deg); }
+    #sign-up-form #disclaimer .disclaimer-text {
+      font-family: 'azo_sanslight';
+      color: #888888;
+      float: left;
+      font-size: .70em;
+      line-height: 1.2em;
+      padding: 0 0 0 22px;
+      margin: -2px 0 0 0; }

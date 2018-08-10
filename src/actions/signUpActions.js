@@ -1,5 +1,8 @@
 export const UPDATE_EMAIL = 'UPDATE_EMAIL';
 export const UPDATE_FORM_STATE = 'UPDATE_FORM_STATE';
+export const UPDATE_FIRST_NAME = 'UPDATE_FIRST_NAME';
+export const UPDATE_LAST_NAME = 'UPDATE_LAST_NAME';
+export const TOGGLE_AGREES_TO_DISCLAIMER = 'TOGGLE_AGREES_TO_DISCLAIMER';
 
 export const updateEmail = (payload) => ({
     type: UPDATE_EMAIL,
@@ -14,6 +17,10 @@ export const updateFirstName = (payload) => ({
 export const updateLastName = (payload) => ({
   type: UPDATE_LAST_NAME,
   payload: payload.target.value
+});
+
+export const toggleAgreesToDisclaimer = () => ({
+  type: TOGGLE_AGREES_TO_DISCLAIMER
 });
 
 export const updateFormState = (payload) => ({

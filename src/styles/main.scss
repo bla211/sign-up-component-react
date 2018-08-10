@@ -62,7 +62,9 @@ html {
 	visibility: hidden;
 }
 
-
+%line{
+	display: inline-block;
+}
 @mixin appearance($property){
 	-webkit-appearance: $property;
 	-moz-appearance:    $property;
@@ -75,7 +77,7 @@ html {
 	&:-ms-input-placeholder      {@content}  
   }
 
-
+$light-grey-blue: #94AEBF;
 
 
 

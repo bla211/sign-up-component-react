@@ -1,4 +1,4 @@
-import { UPDATE_EMAIL, UPDATE_FORM_STATE, UPDATE_FIRST_NAME, UPDATE_LAST_NAME } from '../actions/signUpActions'
+import { UPDATE_EMAIL, UPDATE_FORM_STATE, UPDATE_FIRST_NAME, UPDATE_LAST_NAME, TOGGLE_AGREES_TO_DISCLAIMER } from '../actions/signUpActions'
 
 const signUp = (state = {
     formState: 'email',
@@ -7,7 +7,8 @@ const signUp = (state = {
         name: {
             first: '',
             last: ''
-        }
+        },
+        isAgreesToDisclaimer: false
     }
 }, action) => {
     switch (action.type) {
@@ -36,6 +37,13 @@ const signUp = (state = {
                         ...state.userInfo.name,
                         last: action.payload
                     }
+                }
+            }
+        case TOGGLE_AGREES_TO_DISCLAIMER:
+            return {...state,
+                userInfo: {
+                    ...state.userInfo,
+                    isAgreesToDisclaimer: !state.userInfo.isAgreesToDisclaimer
                 }
             }
         case UPDATE_FORM_STATE:

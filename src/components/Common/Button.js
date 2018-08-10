@@ -8,7 +8,7 @@ class Button extends Component {
         const { data } = this.props;
 
         return(
-            <button onClick={() => onclick(data) }>{ title }</button>
+            <button onClick={ () => onclick(data) }>{ title }</button>
         )
     }
 
