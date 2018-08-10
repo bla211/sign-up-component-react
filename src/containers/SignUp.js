@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Form from '../components/SignUp/Form';
-import { updateEmail, updateFormState } from '../actions/signUpActions'
+import { updateEmail, updateFormState, updateFirstName, updateLastName } from '../actions/signUpActions'
 
 export class SignUp extends Component {
 
@@ -25,6 +25,12 @@ export const mapDispatchToProps =(dispatch) => {
     },
     updateFormState: (payload) => {
       dispatch(updateFormState(payload));
+    },
+    updateFirstName: (payload) => {
+      dispatch(updateFirstName(payload));
+    },
+    updateLastName: (payload) => {
+      dispatch(updateLastName(payload));
     }
   }
 }

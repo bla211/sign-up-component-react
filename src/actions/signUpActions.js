@@ -6,6 +6,16 @@ export const updateEmail = (payload) => ({
     payload: payload.target.value
 });
 
+export const updateFirstName = (payload) => ({
+  type: UPDATE_FIRST_NAME,
+  payload: payload.target.value
+});
+
+export const updateLastName = (payload) => ({
+  type: UPDATE_LAST_NAME,
+  payload: payload.target.value
+});
+
 export const updateFormState = (payload) => ({
   type: UPDATE_FORM_STATE,
   payload: payload

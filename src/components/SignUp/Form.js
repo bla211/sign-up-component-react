@@ -7,6 +7,8 @@ class Form extends Component {
     render(){
         const { signUpState } = this.props;
         const { updateEmail } = this.props;
+        const { updateFirstName } = this.props;
+        const { updateLastName } = this.props;
         const { updateFormState } = this.props;
         
         let input, button;
@@ -16,10 +18,10 @@ class Form extends Component {
         }
         else if(signUpState.formState === 'name'){
             input =  <div id="input-wrapper">
-                        <Input placeholder="First Name" className="half-width"/>
-                        <Input placeholder="Last Name" className="half-width"/>
+                        <Input placeholder="First Name" className="half-width" val={ signUpState.userInfo.name.first } handleChange={ updateFirstName }/>
+                        <Input placeholder="Last Name" className="half-width" val={ signUpState.userInfo.name.last } handleChange={ updateLastName }/>
                     </div>;
-            button = <Button title="sign up"/>
+            button = <Button title="sign up" onclick={ updateFormState } data="congrats"/>
         }
 
         return(
@@ -36,6 +38,8 @@ class Form extends Component {
 
 Form.propTypes = {
     updateEmail: PropTypes.string,
+    updateFirstName: PropTypes.string,
+    updateLastName: PropTypes.string,
     updateFormState: PropTypes.string,
     signUpState: PropTypes.object,
   };
