@@ -27,7 +27,7 @@ module.exports = {
           presets: ["react", "stage-0", "es2015"],
           plugins: ["transform-class-properties", "transform-decorators-legacy"]
         }
-      }
+      },
     ]
   },
   devServer: {

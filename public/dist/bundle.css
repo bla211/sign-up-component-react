@@ -56,3 +56,77 @@ html {
 
 .collapsed {
   visibility: hidden; }
+
+#sign-up-form {
+  width: 100%;
+  float: left;
+  padding: 20px 20px 35px 20px;
+  background: #131020; }
+  #sign-up-form h1 {
+    font-family: 'elaine_d02_regularregular';
+    color: #B6FDBF;
+    font-size: 2.3em;
+    margin: 0 0 14px 0;
+    width: 100%;
+    text-align: center;
+    text-transform: lowercase; }
+  #sign-up-form h2 {
+    font-family: 'azo_sansbold';
+    color: #94AEBF;
+    font-size: 1em;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 1.25em;
+    margin-bottom: 10px; }
+    #sign-up-form h2 .line {
+      display: inline-block; }
+  #sign-up-form #input-wrapper {
+    display: flex;
+    justify-content: space-between; }
+  #sign-up-form .full-width, #sign-up-form .half-width {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 12px 16px;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 4px;
+    margin: 0 0 13px 0;
+    color: white;
+    font-family: 'azo_sansregular'; }
+    #sign-up-form .full-width::-webkit-input-placeholder, #sign-up-form .half-width::-webkit-input-placeholder {
+      font-family: 'azo_sansregular';
+      color: #94AEBF;
+      font-size: 1em; }
+    #sign-up-form .full-width:-moz-placeholder, #sign-up-form .half-width:-moz-placeholder {
+      font-family: 'azo_sansregular';
+      color: #94AEBF;
+      font-size: 1em; }
+    #sign-up-form .full-width::-moz-placeholder, #sign-up-form .half-width::-moz-placeholder {
+      font-family: 'azo_sansregular';
+      color: #94AEBF;
+      font-size: 1em; }
+    #sign-up-form .full-width:-ms-input-placeholder, #sign-up-form .half-width:-ms-input-placeholder {
+      font-family: 'azo_sansregular';
+      color: #94AEBF;
+      font-size: 1em; }
+  #sign-up-form .full-width {
+    width: 100%; }
+  #sign-up-form .half-width {
+    width: calc(50% - 5px); }
+  #sign-up-form button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 100%;
+    font-family: 'azo_sansbold';
+    font-size: .9em;
+    background: #ED1F34;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    text-align: center;
+    padding: 12px 0;
+    text-transform: uppercase;
+    cursor: pointer; }
