@@ -56,9 +56,13 @@
             @extend %line;
         }
     }
-    #input-wrapper{
-        display: flex;
-        justify-content: space-between;
+
+    .error{
+        font-family: 'azo_sansregular';
+        float: left;
+        color: red;
+        font-size: .75em;
+        margin: 0 0 13px 0;
     }
 
     #disclaimer{

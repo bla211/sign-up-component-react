@@ -30,7 +30,7 @@ class Form extends Component {
             }
 
             if(signUpState.showErrors){
-                error = <div>{ errorMessage }</div>
+                error = <div class="error">{ errorMessage }</div>
             }
 
             button = <Button title="next" onclick={ updateFormState } data="name" isError={ isError } onError={ updateShowErrors }/>

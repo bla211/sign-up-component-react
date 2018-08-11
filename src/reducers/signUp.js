@@ -49,7 +49,8 @@ const signUp = (state = {
             }
         case UPDATE_FORM_STATE:
         return {...state,
-            formState: action.payload
+            formState: action.payload,
+            showErrors: false
         }
         case UPDATE_SHOW_ERRORS:
         return {...state,
