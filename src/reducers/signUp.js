@@ -1,14 +1,15 @@
-import { UPDATE_EMAIL, UPDATE_FORM_STATE, UPDATE_FIRST_NAME, UPDATE_LAST_NAME, TOGGLE_AGREES_TO_DISCLAIMER } from '../actions/signUpActions'
+import { UPDATE_EMAIL, UPDATE_FORM_STATE, UPDATE_FIRST_NAME, UPDATE_LAST_NAME, TOGGLE_AGREES_TO_DISCLAIMER, UPDATE_SHOW_ERRORS } from '../actions/signUpActions'
 
 const signUp = (state = {
     formState: 'email',
+    showErrors: false,
     userInfo: {
         email: '',
         name: {
             first: '',
             last: ''
         },
-        isAgreesToDisclaimer: false
+        isAgreesToDisclaimer: true
     }
 }, action) => {
     switch (action.type) {
@@ -49,6 +50,10 @@ const signUp = (state = {
         case UPDATE_FORM_STATE:
         return {...state,
             formState: action.payload
+        }
+        case UPDATE_SHOW_ERRORS:
+        return {...state,
+            showErrors: action.payload
         }
       default:
         return state

@@ -63,11 +63,12 @@ html {
 #sign-up-form {
   width: 100%;
   float: left;
-  background: #131020; }
+  background: #131020;
+  margin-top: 150px; }
   #sign-up-form.email, #sign-up-form.name {
     padding: 20px 20px 35px 20px; }
   #sign-up-form.congrats {
-    padding: 64px 20px 64px 20px; }
+    padding: 61px 20px 61px 20px; }
   #sign-up-form h1 {
     font-family: 'elaine_d02_regularregular';
     color: #B6FDBF;
@@ -88,7 +89,7 @@ html {
   #sign-up-form h3 {
     font-family: 'azo_sansbold';
     color: #94AEBF;
-    font-size: 1.25em;
+    font-size: 1.4em;
     width: 100%;
     text-align: center;
     text-transform: capitalize;
@@ -213,6 +214,8 @@ button {
   text-transform: uppercase;
   cursor: pointer;
   float: left; }
+  button:disabled {
+    opacity: .25; }
 
 .margin-bottom_48 {
   margin-bottom: 48px; }

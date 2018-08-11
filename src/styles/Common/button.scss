@@ -12,6 +12,9 @@ button{
     text-transform: uppercase;
     cursor: pointer;
     float: left;
+    &:disabled{
+        opacity: .25;
+    }
 }
 
 .margin-bottom_48{

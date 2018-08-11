@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Form from '../components/SignUp/Form';
-import { updateEmail, updateFormState, updateFirstName, updateLastName, toggleAgreesToDisclaimer } from '../actions/signUpActions'
+import { updateEmail, updateFormState, updateFirstName, updateLastName, toggleAgreesToDisclaimer, updateShowErrors } from '../actions/signUpActions'
 
 export class SignUp extends Component {
 
@@ -34,7 +34,10 @@ export const mapDispatchToProps =(dispatch) => {
     },
     toggleAgreesToDisclaimer: () => {
       dispatch(toggleAgreesToDisclaimer());
-    }
+    },
+    updateShowErrors: (payload) => {
+      dispatch(updateShowErrors(payload));
+    },
   }
 }
 

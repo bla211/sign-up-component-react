@@ -5,24 +5,38 @@ import Button from '../Common/Button';
 
 class Form extends Component {
     render(){
-        const { signUpState } = this.props;
-        const { updateEmail } = this.props;
-        const { updateFirstName } = this.props;
-        const { updateLastName } = this.props;
-        const { toggleAgreesToDisclaimer } = this.props;
-        const { updateFormState } = this.props;
+        const { signUpState, updateEmail, updateFirstName, updateLastName, toggleAgreesToDisclaimer, updateFormState, updateShowErrors } = this.props;
         
-        let input, button, h1, h2, h3, h4, disclaimer, statePadding;
+        let input, button, h1, h2, h3, h4, disclaimer, errorMessage = '', isError = false, error;
         if(signUpState.formState === 'email'){
             h1 = <h1>Join the list</h1>;
             h2 = <h2>
                     <span class="line">Sign up for</span>&nbsp;<span class="line">the TLC newsletter</span>
                 </h2>;
-            input = <Input placeholder="enter email address" type="email" className="full-width" val={ signUpState.userInfo.email } handleChange={ updateEmail }/>;
-            button = <Button title="next" onclick={ updateFormState } data="name"/>
+            input = <Input placeholder="enter email address" type="text" className="full-width" val={ signUpState.userInfo.email } handleChange={ updateEmail }/>;
+            const regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/; 
+            
+            if(!regex.test(signUpState.userInfo.email) && !signUpState.userInfo.isAgreesToDisclaimer){
+                isError = true;
+                errorMessage = '* fields not valid, please check.'
+            }
+            else if(!regex.test(signUpState.userInfo.email)){
+                isError = true;
+                errorMessage = '* Please enter a valid email'
+            }
+            else if(!signUpState.userInfo.isAgreesToDisclaimer){
+                isError = true;
+                errorMessage = '* You must opt in';
+            }
+
+            if(signUpState.showErrors){
+                error = <div>{ errorMessage }</div>
+            }
+
+            button = <Button title="next" onclick={ updateFormState } data="name" isError={ isError } onError={ updateShowErrors }/>
             disclaimer = <div id="disclaimer">
                             <label class="checkbox-wrapper">
-                                <input type="checkbox" value={ signUpState.userInfo.isAgreeToDisclaimer } onChange={ () => toggleAgreesToDisclaimer() }/>
+                                <input type="checkbox" checked={ signUpState.userInfo.isAgreesToDisclaimer } onChange={ () => toggleAgreesToDisclaimer() }/>
                                 <span class="checkmark"></span>
                             </label>
                             <p class="disclaimer-text">
@@ -39,7 +53,7 @@ class Form extends Component {
                         <Input placeholder="First Name" className="half-width" val={ signUpState.userInfo.name.first } handleChange={ updateFirstName }/>
                         <Input placeholder="Last Name" className="half-width" val={ signUpState.userInfo.name.last } handleChange={ updateLastName }/>
                     </div>;
-            button = <Button title="sign up" onclick={ updateFormState } data="congrats" className="margin-bottom_48"/>
+            button = <Button title="sign up" onclick={ updateFormState } data="congrats" className="margin-bottom_48" onError={ errorMessage }/>
         }
         else if(signUpState.formState === 'congrats'){
             h1 = <h1>Congratulations!</h1>;
@@ -56,6 +70,7 @@ class Form extends Component {
                 { h3 }
                 { h4 }
                 { input }
+                { error }
                 { button }
                 { disclaimer }        
             </div>
@@ -70,7 +85,8 @@ Form.propTypes = {
     updateLastName: PropTypes.string,
     updateFormState: PropTypes.string,
     signUpState: PropTypes.object,
-    toggleAgreesToDisclaimer: PropTypes.string
+    toggleAgreesToDisclaimer: PropTypes.string,
+    updateShowErrors: PropTypes.string
   };
 
 export default Form;

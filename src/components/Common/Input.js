@@ -15,7 +15,7 @@ Input.propTypes = {
     className: PropTypes.string,
     val: PropTypes.string,
     handleChange: PropTypes.func,
-    type: PropTypes.string
+    type: PropTypes.string,
   };
 
 export default Input;
