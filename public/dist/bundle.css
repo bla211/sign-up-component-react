@@ -63,8 +63,11 @@ html {
 #sign-up-form {
   width: 100%;
   float: left;
-  padding: 20px 20px 35px 20px;
   background: #131020; }
+  #sign-up-form.email, #sign-up-form.name {
+    padding: 20px 20px 35px 20px; }
+  #sign-up-form.congrats {
+    padding: 64px 20px 64px 20px; }
   #sign-up-form h1 {
     font-family: 'elaine_d02_regularregular';
     color: #B6FDBF;
@@ -102,59 +105,14 @@ html {
   #sign-up-form #input-wrapper {
     display: flex;
     justify-content: space-between; }
-  #sign-up-form .full-width, #sign-up-form .half-width {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    padding: 12px 16px;
-    background: rgba(255, 255, 255, 0.1);
-    border: none;
-    border-radius: 4px;
-    margin: 0 0 13px 0;
-    color: white;
-    font-family: 'azo_sansregular'; }
-    #sign-up-form .full-width::-webkit-input-placeholder, #sign-up-form .half-width::-webkit-input-placeholder {
-      font-family: 'azo_sansregular';
-      color: #94AEBF;
-      font-size: 1em; }
-    #sign-up-form .full-width:-moz-placeholder, #sign-up-form .half-width:-moz-placeholder {
-      font-family: 'azo_sansregular';
-      color: #94AEBF;
-      font-size: 1em; }
-    #sign-up-form .full-width::-moz-placeholder, #sign-up-form .half-width::-moz-placeholder {
-      font-family: 'azo_sansregular';
-      color: #94AEBF;
-      font-size: 1em; }
-    #sign-up-form .full-width:-ms-input-placeholder, #sign-up-form .half-width:-ms-input-placeholder {
-      font-family: 'azo_sansregular';
-      color: #94AEBF;
-      font-size: 1em; }
-  #sign-up-form .full-width {
-    width: 100%; }
-  #sign-up-form .half-width {
-    width: calc(50% - 5px); }
-  #sign-up-form button {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    width: 100%;
-    font-family: 'azo_sansbold';
-    font-size: .9em;
-    background: #ED1F34;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    text-align: center;
-    padding: 12px 0;
-    text-transform: uppercase;
-    cursor: pointer; }
   #sign-up-form #disclaimer {
-    padding: 0 12px; }
+    padding: 0 12px;
+    float: left;
+    margin-top: 10px; }
     #sign-up-form #disclaimer .checkbox-wrapper {
       display: block;
       position: relative;
-      padding-left: 35px;
-      margin-bottom: 12px;
+      float: left;
       cursor: pointer;
       font-size: 22px;
       -webkit-user-select: none;
@@ -166,6 +124,8 @@ html {
       #sign-up-form #disclaimer .checkbox-wrapper input {
         position: absolute;
         opacity: 0;
+        top: 0;
+        left: 0;
         cursor: pointer; }
         #sign-up-form #disclaimer .checkbox-wrapper input:checked ~ .checkmark {
           background-color: #FFFFFF; }
@@ -194,6 +154,7 @@ html {
           -ms-transform: rotate(45deg);
           transform: rotate(45deg); }
     #sign-up-form #disclaimer .disclaimer-text {
+      float: left;
       font-family: 'azo_sanslight';
       color: #888888;
       float: left;
@@ -201,3 +162,57 @@ html {
       line-height: 1.2em;
       padding: 0 0 0 22px;
       margin: -2px 0 0 0; }
+
+.full-width, .half-width {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 12px 16px;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 4px;
+  margin: 0 0 13px 0;
+  color: white;
+  font-family: 'azo_sansregular'; }
+  .full-width::-webkit-input-placeholder, .half-width::-webkit-input-placeholder {
+    font-family: 'azo_sansregular';
+    color: #94AEBF;
+    font-size: 1em; }
+  .full-width:-moz-placeholder, .half-width:-moz-placeholder {
+    font-family: 'azo_sansregular';
+    color: #94AEBF;
+    font-size: 1em; }
+  .full-width::-moz-placeholder, .half-width::-moz-placeholder {
+    font-family: 'azo_sansregular';
+    color: #94AEBF;
+    font-size: 1em; }
+  .full-width:-ms-input-placeholder, .half-width:-ms-input-placeholder {
+    font-family: 'azo_sansregular';
+    color: #94AEBF;
+    font-size: 1em; }
+
+.full-width {
+  width: 100%; }
+
+.half-width {
+  width: calc(50% - 5px); }
+
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 100%;
+  font-family: 'azo_sansbold';
+  font-size: .9em;
+  background: #ED1F34;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  text-align: center;
+  padding: 12px 0;
+  text-transform: uppercase;
+  cursor: pointer;
+  float: left; }
+
+.margin-bottom_48 {
+  margin-bottom: 48px; }

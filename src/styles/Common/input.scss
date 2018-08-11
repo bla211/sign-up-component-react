@@ -1,0 +1,25 @@
+%input {        
+    @include appearance(none);
+    padding: 12px 16px;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 4px;
+    margin: 0 0 13px 0;
+    color: white;
+    font-family: 'azo_sansregular';
+    @include placeholder {
+        font-family: 'azo_sansregular';
+        color: $light-grey-blue;
+        font-size: 1em;
+    }
+}
+
+.full-width{
+    @extend %input;
+    width: 100%;    
+}
+
+.half-width{
+    @extend %input;
+    width: calc(50% - 5px);     
+}

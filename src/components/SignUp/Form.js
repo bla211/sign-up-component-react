@@ -12,7 +12,7 @@ class Form extends Component {
         const { toggleAgreesToDisclaimer } = this.props;
         const { updateFormState } = this.props;
         
-        let input, button, h1, h2, h3, h4, disclaimer;
+        let input, button, h1, h2, h3, h4, disclaimer, statePadding;
         if(signUpState.formState === 'email'){
             h1 = <h1>Join the list</h1>;
             h2 = <h2>
@@ -39,7 +39,7 @@ class Form extends Component {
                         <Input placeholder="First Name" className="half-width" val={ signUpState.userInfo.name.first } handleChange={ updateFirstName }/>
                         <Input placeholder="Last Name" className="half-width" val={ signUpState.userInfo.name.last } handleChange={ updateLastName }/>
                     </div>;
-            button = <Button title="sign up" onclick={ updateFormState } data="congrats"/>
+            button = <Button title="sign up" onclick={ updateFormState } data="congrats" className="margin-bottom_48"/>
         }
         else if(signUpState.formState === 'congrats'){
             h1 = <h1>Congratulations!</h1>;
@@ -50,7 +50,7 @@ class Form extends Component {
         }
 
         return(
-            <div id="sign-up-form">
+            <div id="sign-up-form" class={ signUpState.formState }>
                 { h1 }
                 { h2 }
                 { h3 }

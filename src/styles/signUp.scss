@@ -1,8 +1,13 @@
 #sign-up-form{
     width: 100%;
     float: left;
-    padding: 20px 20px 35px 20px;
     background: #131020;
+    &.email, &.name{
+        padding: 20px 20px 35px 20px;
+    }
+    &.congrats{
+        padding: 64px 20px 64px 20px;
+    }
     h1{
         font-family: 'elaine_d02_regularregular';
         color: #B6FDBF;
@@ -54,54 +59,15 @@
         display: flex;
         justify-content: space-between;
     }
-    %input {        
-        @include appearance(none);
-        padding: 12px 16px;
-        background: rgba(255, 255, 255, 0.1);
-        border: none;
-        border-radius: 4px;
-        margin: 0 0 13px 0;
-        color: white;
-        font-family: 'azo_sansregular';
-        @include placeholder {
-            font-family: 'azo_sansregular';
-            color: $light-grey-blue;
-            font-size: 1em;
-        }
-    }
-
-    .full-width{
-        @extend %input;
-        width: 100%;    
-    }
-
-    .half-width{
-        @extend %input;
-        width: calc(50% - 5px);     
-    }
-
-    button{
-        @include appearance(none);
-        width: 100%;
-        font-family: 'azo_sansbold';
-        font-size: .9em;
-        background: #ED1F34;
-        color: white;
-        border: none;
-        border-radius: 4px;
-        text-align: center;
-        padding: 12px 0;
-        text-transform: uppercase;
-        cursor: pointer;
-    }
 
     #disclaimer{
         padding: 0 12px;
+        float: left;
+        margin-top: 10px;
         .checkbox-wrapper{
             display: block;
             position: relative;
-            padding-left: 35px;
-            margin-bottom: 12px;
+            float: left;
             &:hover input ~ .checkmark{
                 background-color: #ccc;    
             }
@@ -114,6 +80,8 @@
             input{
                 position: absolute;
                 opacity: 0;
+                top: 0;
+                left:0;
                 cursor: pointer;
                 &:checked ~ .checkmark{                    
                     background-color: #FFFFFF; 
@@ -148,6 +116,7 @@
               }
         }
         .disclaimer-text{
+            float: left;
             font-family: 'azo_sanslight';
             color: #888888;
             float: left;
