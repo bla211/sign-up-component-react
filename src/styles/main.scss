@@ -81,8 +81,13 @@ html {
 	&::-moz-placeholder          {@content}
 	&:-ms-input-placeholder      {@content}  
   }
+@mixin transition($property...){
+	-webkit-transition: $property;
+	transition: $property;
+}
 
 $light-grey-blue: #94AEBF;
+$button-red: #ED1F34;
 
 
 
