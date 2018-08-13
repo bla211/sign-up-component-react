@@ -39,7 +39,9 @@ class Form extends Component {
             }
             input = <Input placeholder="enter email address" type="text" className={ ["full-width", emailError] } val={ signUpState.userInfo.email } handleChange={ updateEmail }/>;
             button = <Button title="next" onclick={ updateFormState } data="name" isError={ isError } onError={ updateShowErrors }/>
-            disclaimer = <Disclaimer isChecked={ signUpState.userInfo.isAgreesToDisclaimer } toggleChecked={ toggleAgreesToDisclaimer } className={ disclaimerError }/>
+            const disclaimerMessage = "I agree to receive information from Discovery Communications in accordance with the following Privacy Policy"
+
+            disclaimer = <Disclaimer isChecked={ signUpState.userInfo.isAgreesToDisclaimer } toggleChecked={ toggleAgreesToDisclaimer } className={ disclaimerError } disclaimerMessage={ disclaimerMessage }/>
         }
         else if(signUpState.formState === 'name'){
             h1 = <Heading headingType="h1" message={["Join the list"]}/>;
