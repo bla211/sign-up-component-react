@@ -5,10 +5,8 @@ class Heading extends Component {
     render(){
         const { headingType, message } = this.props;
 
-        let heading, lines = message[0];
-        if(message.length > 1){
-            lines = <span><span class="line">{ message[0] }</span>&nbsp;<span class="line">{ message[1] }</span></span>    
-        }
+        let heading;    
+        const lines = message.map((line) => <span class="line">{ line }</span>);  
         switch(headingType){
             case 'h1':
                 heading = <h1>{ lines }</h1>;

@@ -1,0 +1,49 @@
+#sign-up-form{
+    h1{
+        font-family: 'elaine_d02_regularregular';
+        color: #B6FDBF;
+        font-size: 2em;
+        margin: 0 0 14px 0;
+        width: 100%;
+        text-align: center;
+        text-transform: lowercase;
+    }
+    h2{
+        font-family: 'azo_sansbold';
+        color: $light-grey-blue;
+        font-size: 1em;
+        width: 100%;
+        text-align: center;
+        text-transform: uppercase;
+        line-height: 1.25em;
+        margin-bottom: 10px;
+        .line{       
+            @extend %line;
+        }
+    }
+    h3{
+        font-family: 'azo_sansbold';
+        color: $light-grey-blue;
+        font-size: 1.4em;
+        width: 100%;
+        text-align: center;
+        text-transform: capitalize;
+        line-height: 1.25em;
+        margin-bottom: 30px;
+        padding: 0 20px;
+        .line{       
+            @extend %line;
+        }
+    }
+    h4{
+        font-family: 'azo_sanslight';
+        color: $light-grey-blue;
+        font-size: 1.15em;
+        width: 100%;
+        text-align: center;
+        line-height: 1.25em;
+        .line{       
+            @extend %line;
+        }
+    }
+}
