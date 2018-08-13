@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Input from '../Common/Input';
 import Button from '../Common/Button';
+import Disclaimer from '../SignUp/Disclaimer';
+import ErrorMessage from '../SignUp/ErrorMessage';
+import Heading from '../Common/Heading';
+import Input from '../Common/Input';
 
 class Form extends Component {
     render(){
@@ -9,18 +12,17 @@ class Form extends Component {
         
         let input, button, h1, h2, h3, h4, disclaimer, errorMessage = '', isError = false, error;
         if(signUpState.formState === 'email'){
-            h1 = <h1>Join the list</h1>;
-            h2 = <h2>
-                    <span class="line">Sign up for</span>&nbsp;<span class="line">the TLC newsletter</span>
-                </h2>;
+            h1 = <Heading headingType="h1" message={["Join the list"]}/>;
+            h2 = <Heading headingType="h2" message={ ["Sign up for", "the TLC newsletter"] }/>;
             input = <Input placeholder="enter email address" type="text" className="full-width" val={ signUpState.userInfo.email } handleChange={ updateEmail }/>;
-            const regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/; 
             
-            if(!regex.test(signUpState.userInfo.email) && !signUpState.userInfo.isAgreesToDisclaimer){
+            const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            let isValidEmail = emailRegex.test(signUpState.userInfo.email);            
+            if(!isValidEmail && !signUpState.userInfo.isAgreesToDisclaimer){
                 isError = true;
                 errorMessage = '* fields not valid, please check.'
             }
-            else if(!regex.test(signUpState.userInfo.email)){
+            else if(!isValidEmail){
                 isError = true;
                 errorMessage = '* Please enter a valid email'
             }
@@ -30,25 +32,15 @@ class Form extends Component {
             }
 
             if(signUpState.showErrors){
-                error = <div class="error">{ errorMessage }</div>
+                error = <ErrorMessage errorMessage={ errorMessage }/>
             }
 
             button = <Button title="next" onclick={ updateFormState } data="name" isError={ isError } onError={ updateShowErrors }/>
-            disclaimer = <div id="disclaimer">
-                            <label class="checkbox-wrapper">
-                                <input type="checkbox" checked={ signUpState.userInfo.isAgreesToDisclaimer } onChange={ () => toggleAgreesToDisclaimer() }/>
-                                <span class="checkmark"></span>
-                            </label>
-                            <p class="disclaimer-text">
-                                I agree to receive information from Discovery Communications in accordance with the following Privacy Policy
-                            </p>
-                        </div>
+            disclaimer = <Disclaimer isChecked={ signUpState.userInfo.isAgreesToDisclaimer } toggleChecked={ toggleAgreesToDisclaimer }/>
         }
         else if(signUpState.formState === 'name'){
-            h1 = <h1>Join the list</h1>;
-            h2 = <h2>
-                    <span class="line">Almost done! Please enter</span>&nbsp;<span class="line">your first and last name</span>
-                </h2>;
+            h1 = <Heading headingType="h1" message={["Join the list"]}/>;
+            h2 = <Heading headingType="h2" message={["Almost done! Please enter", "your first and last name"]}/>;
             input = <div id="input-wrapper">
                         <Input placeholder="First Name" className="half-width" val={ signUpState.userInfo.name.first } handleChange={ updateFirstName }/>
                         <Input placeholder="Last Name" className="half-width" val={ signUpState.userInfo.name.last } handleChange={ updateLastName }/>
@@ -56,11 +48,9 @@ class Form extends Component {
             button = <Button title="sign up" onclick={ updateFormState } data="congrats" className="margin-bottom_48" onError={ errorMessage }/>
         }
         else if(signUpState.formState === 'congrats'){
-            h1 = <h1>Congratulations!</h1>;
-            h3 = <h3>
-                    <span class="line">Thank you for</span>&nbsp;<span class="line">signing up!</span>
-                </h3>;
-            h4 = <h4>Look out for the latest news on your favorite shows.</h4>
+            h1 = <Heading headingType="h1" message={["Congratulations"]}/>;
+            h3 = <Heading headingType="h3" message={["Thank you for", "signing up!"]}/>;
+            h4 = <Heading headingType="h4" message={["Look out for the latest news on your favorite shows."]}/>;
         }
 
         return(
