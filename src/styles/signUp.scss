@@ -1,48 +1,119 @@
-#sign-up-form{
+#sign-up-form-wrapper{
     width: 100%;
     float: left;
     background: #131020;
     margin-top: 150px;
-    &.email, &.name{
-        padding: 20px 20px 35px 20px;
-    }
-    &.congrats{
-        padding: 61px 20px 61px 20px;
-    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    .error{
-        font-family: 'azo_sansregular';
-        float: left;
-        color: red;
-        font-size: .75em;
-        margin: 0 0 13px 0;
-    }
+    #sign-up-form{
+        display: inline-block;
+        position: relative;
+        width: 100%;
+        @include breakpoint(mobile) {
+            max-width: 540px;
+        }
+        @include breakpoint(tablet-portrait) {
+            max-width: 540px;
+        }
+        @include breakpoint(tablet-landscape) {
+            max-width: 800px;
+        }
+        @include breakpoint(large) {
+            max-width: 1006px;
+        }
+        &.email, &.name{
+            @include breakpoint(mobile) {
+                padding: 20px 20px 35px 20px;
+            }
+            @include breakpoint(tablet-portrait) {
+                padding: 20px 0 35px 0;
+            }
+            @include breakpoint(tablet-landscape) {
+                padding: 47px 0 42px 0;
+            }
+            @include breakpoint(large) {
+                padding: 47px 0 42px 0;
+            }
+        }
+        &.congrats{
+            @include breakpoint(mobile) {              
+                padding: 61px 20px 61px 20px;
+            }
+            @include breakpoint(tablet-portrait) {         
+                padding: 61px 20px 61px 20px;
+            }
+            @include breakpoint(tablet-landscape) {             
+                padding: 61px 20px 61px 20px;
+            }
+            @include breakpoint(large) {               
+                padding: 61px 20px 61px 20px;
+            }
 
-    #disclaimer{
-        padding: 0 12px;
-        float: left;
-        margin-top: 10px;
-        .disclaimer-text{
+            #sign-up-form-inner{               
+                @include breakpoint(tablet-landscape) {
+                    width: calc(100% - 326px);
+                }
+                @include breakpoint(large) {
+                    width: calc(100% - 455px);
+                }  
+            }
+        }
+
+        #sign-up-form-inner{
+            @include breakpoint(mobile) {
+                width: 100%;
+                float: left;
+            }
+            @include breakpoint(tablet-portrait) {
+                width: 100%;
+                float: left;
+            }
+            @include breakpoint(tablet-landscape) {
+                width: calc(100% - 246px);
+                float: right;
+            }
+            @include breakpoint(large) {
+                width: calc(100% - 356px);
+                float: right;
+            }  
+        }
+
+        .error{
+            font-family: 'azo_sansregular';
             float: left;
-            font-family: 'azo_sanslight';
-            color: #888888;
+            color: red;
+            font-size: .75rem;
+            margin: 0 0 13px 0;
+        }
+
+        #disclaimer{
             float: left;
-            font-size: .70em;
-            line-height: 1.2em;
-            padding: 0 0 0 22px;
-            margin: -2px 0 0 0;
+            margin-top: 10px;
+            @include breakpoint(mobile) {
+                width: 100%;
+                padding: 0 12px;
+            }
+            @include breakpoint(tablet-portrait) {
+                width: calc(100% - 170px);
+                padding: 0;
+                margin: 0;
+            }
+            @include breakpoint(tablet-landscape) {
+            }
+            @include breakpoint(large) {
+            }
+            .disclaimer-text{
+                float: left;
+                font-family: 'azo_sanslight';
+                color: #888888;
+                float: left;
+                font-size: .70rem;
+                line-height: 1rem;
+                padding: 0 0 0 22px;
+                margin: -2px 0 0 0;
+            }
         }
     }
 }
-
-@media only screen and (min-width: 320px) {
-
-}
-
-@media only screen and (min-width: 768px) {
-
-}
-
-@media only screen and (min-width: 1024px) {
-
-} 

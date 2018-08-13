@@ -19,7 +19,6 @@ time, mark, audio, video {
   padding: 0;
   border: 0;
   font-size: 100%;
-  font: inherit;
   vertical-align: baseline; }
 
 /* HTML5 display-role reset for older browsers */
@@ -28,7 +27,8 @@ footer, header, hgroup, menu, nav, section {
   display: block; }
 
 body {
-  line-height: 1; }
+  line-height: 1;
+  font-size: 14px; }
 
 ol, ul {
   list-style: none; }
@@ -70,7 +70,6 @@ button {
   transition: background 0.1s ease-in-out, color 0.1s ease-in-out;
   width: 100%;
   font-family: 'azo_sansbold';
-  font-size: .9em;
   background: #ED1F34;
   color: white;
   border: none;
@@ -79,12 +78,20 @@ button {
   padding: 12px 0;
   text-transform: uppercase;
   cursor: pointer;
-  float: left; }
+  float: right; }
   button:disabled {
     opacity: .25; }
   button:hover {
     background: white;
     color: #ED1F34; }
+  @media (min-width: 0px) {
+    button {
+      width: 100%;
+      font-size: 1rem; } }
+  @media (min-width: 768px) {
+    button {
+      width: 150px;
+      font-size: 1.25rem; } }
 
 .margin-bottom_48 {
   margin-bottom: 48px; }
@@ -138,33 +145,98 @@ button {
 #sign-up-form h1 {
   font-family: 'elaine_d02_regularregular';
   color: #B6FDBF;
-  font-size: 2em;
   margin: 0 0 14px 0;
-  width: 100%;
   text-align: center;
-  text-transform: lowercase; }
+  text-transform: lowercase;
+  float: left; }
+  @media (min-width: 0px) {
+    #sign-up-form h1 {
+      font-size: 2rem;
+      width: 100%; } }
+  @media (min-width: 768px) {
+    #sign-up-form h1 {
+      font-size: 2.75rem;
+      width: 100%; } }
+  @media (min-width: 1024px) {
+    #sign-up-form h1 {
+      font-size: 3.6rem;
+      width: auto;
+      position: absolute;
+      left: 0;
+      top: calc(50% - 1.8rem); } }
+  @media (min-width: 1440px) {
+    #sign-up-form h1 {
+      font-size: 5rem;
+      width: auto;
+      position: absolute;
+      left: 0;
+      top: calc(50% - 2.5rem); } }
 
 #sign-up-form h2 {
   font-family: 'azo_sansbold';
   color: #94AEBF;
-  font-size: 1em;
   width: 100%;
-  text-align: center;
   text-transform: uppercase;
-  line-height: 1.25em;
-  margin-bottom: 10px;
-  padding: 0 2px; }
+  padding: 0 2px;
+  float: left; }
+  @media (min-width: 0px) {
+    #sign-up-form h2 {
+      font-size: 1rem;
+      line-height: 1.25rem;
+      margin-bottom: 10px;
+      text-align: center; } }
+  @media (min-width: 768px) {
+    #sign-up-form h2 {
+      font-size: 1.25rem;
+      line-height: 1.5rem;
+      margin-bottom: 20px;
+      text-align: center; } }
+  @media (min-width: 1024px) {
+    #sign-up-form h2 {
+      font-size: 1.25rem;
+      line-height: 1.5rem;
+      margin-bottom: 20px;
+      text-align: left; } }
+  @media (min-width: 1440px) {
+    #sign-up-form h2 {
+      font-size: 1.4rem;
+      line-height: 1.65rem;
+      margin-bottom: 27px;
+      text-align: left; } }
 
 #sign-up-form h3 {
   font-family: 'azo_sansbold';
   color: #94AEBF;
-  font-size: 1.4em;
+  font-size: 1.4rem;
   width: 100%;
   text-align: center;
   text-transform: capitalize;
-  line-height: 1.25em;
-  margin-bottom: 30px;
-  padding: 0 20px; }
+  padding: 0 20px;
+  float: left; }
+  @media (min-width: 0px) {
+    #sign-up-form h3 {
+      font-size: 1rem;
+      line-height: 1.25rem;
+      margin-bottom: 30px;
+      text-align: center; } }
+  @media (min-width: 768px) {
+    #sign-up-form h3 {
+      font-size: 2rem;
+      line-height: 2.25rem;
+      margin-bottom: 30px;
+      text-align: center; } }
+  @media (min-width: 1024px) {
+    #sign-up-form h3 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+      text-align: left;
+      padding: 0; } }
+  @media (min-width: 1440px) {
+    #sign-up-form h3 {
+      font-size: 2.2rem;
+      margin-bottom: 24px;
+      text-align: left;
+      padding: 0; } }
 
 #sign-up-form h4 {
   font-family: 'azo_sanslight';
@@ -172,7 +244,25 @@ button {
   font-size: 1.15em;
   width: 100%;
   text-align: center;
-  line-height: 1.25em; }
+  line-height: 1.25em;
+  float: left; }
+  @media (min-width: 0px) {
+    #sign-up-form h4 {
+      font-size: 1rem;
+      line-height: 1.25rem;
+      text-align: center; } }
+  @media (min-width: 768px) {
+    #sign-up-form h4 {
+      font-size: 1.4rem;
+      text-align: center; } }
+  @media (min-width: 1024px) {
+    #sign-up-form h4 {
+      font-size: 1.1rem;
+      text-align: left; } }
+  @media (min-width: 1440px) {
+    #sign-up-form h4 {
+      font-size: 1.2rem;
+      text-align: left; } }
 
 #input-wrapper {
   display: flex;
@@ -184,66 +274,184 @@ button {
   appearance: none;
   -webkit-transition: background 0.1s ease-in-out;
   transition: background 0.1s ease-in-out;
-  padding: 12px 16px;
   background: rgba(255, 255, 255, 0.1);
   border: none;
   border-radius: 4px;
   margin: 0 0 13px 0;
   color: white;
-  font-family: 'azo_sansregular'; }
+  font-family: 'azo_sansregular';
+  float: left; }
+  @media (min-width: 0px) {
+    .full-width, .half-width {
+      font-size: 1rem;
+      padding: 12px 16px; } }
+  @media (min-width: 768px) {
+    .full-width, .half-width {
+      font-size: 1.4rem;
+      padding: 10px 16px; } }
   .full-width:focus, .half-width:focus, .full-width:hover, .half-width:hover {
     outline: none;
     background: #5a5865; }
   .full-width::-webkit-input-placeholder, .half-width::-webkit-input-placeholder {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
     font-family: 'azo_sansregular';
     color: #94AEBF;
-    font-size: 1em; }
+    opacity: .4; }
+    @media (min-width: 0px) {
+      .full-width::-webkit-input-placeholder, .half-width::-webkit-input-placeholder {
+        font-size: 1rem; } }
+    @media (min-width: 768px) {
+      .full-width::-webkit-input-placeholder, .half-width::-webkit-input-placeholder {
+        font-size: 1.5rem; } }
   .full-width:-moz-placeholder, .half-width:-moz-placeholder {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
     font-family: 'azo_sansregular';
     color: #94AEBF;
-    font-size: 1em; }
+    opacity: .4; }
+    @media (min-width: 0px) {
+      .full-width:-moz-placeholder, .half-width:-moz-placeholder {
+        font-size: 1rem; } }
+    @media (min-width: 768px) {
+      .full-width:-moz-placeholder, .half-width:-moz-placeholder {
+        font-size: 1.5rem; } }
   .full-width::-moz-placeholder, .half-width::-moz-placeholder {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
     font-family: 'azo_sansregular';
     color: #94AEBF;
-    font-size: 1em; }
+    opacity: .4; }
+    @media (min-width: 0px) {
+      .full-width::-moz-placeholder, .half-width::-moz-placeholder {
+        font-size: 1rem; } }
+    @media (min-width: 768px) {
+      .full-width::-moz-placeholder, .half-width::-moz-placeholder {
+        font-size: 1.5rem; } }
   .full-width:-ms-input-placeholder, .half-width:-ms-input-placeholder {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
     font-family: 'azo_sansregular';
     color: #94AEBF;
-    font-size: 1em; }
+    opacity: .4; }
+    @media (min-width: 0px) {
+      .full-width:-ms-input-placeholder, .half-width:-ms-input-placeholder {
+        font-size: 1rem; } }
+    @media (min-width: 768px) {
+      .full-width:-ms-input-placeholder, .half-width:-ms-input-placeholder {
+        font-size: 1.5rem; } }
   .is-not-valid.full-width, .is-not-valid.half-width {
     background: rgba(255, 0, 0, 0.2); }
 
-.full-width {
-  width: 100%; }
+@media (min-width: 0px) {
+  .full-width {
+    width: 100%; } }
+
+@media (min-width: 768px) {
+  .full-width {
+    width: calc(100% - 170px); } }
 
 .half-width {
   width: calc(50% - 5px); }
 
-#sign-up-form {
+#sign-up-form-wrapper {
   width: 100%;
   float: left;
   background: #131020;
-  margin-top: 150px; }
-  #sign-up-form.email, #sign-up-form.name {
-    padding: 20px 20px 35px 20px; }
-  #sign-up-form.congrats {
-    padding: 61px 20px 61px 20px; }
-  #sign-up-form .error {
-    font-family: 'azo_sansregular';
-    float: left;
-    color: red;
-    font-size: .75em;
-    margin: 0 0 13px 0; }
-  #sign-up-form #disclaimer {
-    padding: 0 12px;
-    float: left;
-    margin-top: 10px; }
-    #sign-up-form #disclaimer .disclaimer-text {
+  margin-top: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  #sign-up-form-wrapper #sign-up-form {
+    display: inline-block;
+    position: relative;
+    width: 100%; }
+    @media (min-width: 0px) {
+      #sign-up-form-wrapper #sign-up-form {
+        max-width: 540px; } }
+    @media (min-width: 768px) {
+      #sign-up-form-wrapper #sign-up-form {
+        max-width: 540px; } }
+    @media (min-width: 1024px) {
+      #sign-up-form-wrapper #sign-up-form {
+        max-width: 800px; } }
+    @media (min-width: 1440px) {
+      #sign-up-form-wrapper #sign-up-form {
+        max-width: 1006px; } }
+    @media (min-width: 0px) {
+      #sign-up-form-wrapper #sign-up-form.email, #sign-up-form-wrapper #sign-up-form.name {
+        padding: 20px 20px 35px 20px; } }
+    @media (min-width: 768px) {
+      #sign-up-form-wrapper #sign-up-form.email, #sign-up-form-wrapper #sign-up-form.name {
+        padding: 20px 0 35px 0; } }
+    @media (min-width: 1024px) {
+      #sign-up-form-wrapper #sign-up-form.email, #sign-up-form-wrapper #sign-up-form.name {
+        padding: 47px 0 42px 0; } }
+    @media (min-width: 1440px) {
+      #sign-up-form-wrapper #sign-up-form.email, #sign-up-form-wrapper #sign-up-form.name {
+        padding: 47px 0 42px 0; } }
+    @media (min-width: 0px) {
+      #sign-up-form-wrapper #sign-up-form.congrats {
+        padding: 61px 20px 61px 20px; } }
+    @media (min-width: 768px) {
+      #sign-up-form-wrapper #sign-up-form.congrats {
+        padding: 61px 20px 61px 20px; } }
+    @media (min-width: 1024px) {
+      #sign-up-form-wrapper #sign-up-form.congrats {
+        padding: 61px 20px 61px 20px; } }
+    @media (min-width: 1440px) {
+      #sign-up-form-wrapper #sign-up-form.congrats {
+        padding: 61px 20px 61px 20px; } }
+    @media (min-width: 1024px) {
+      #sign-up-form-wrapper #sign-up-form.congrats #sign-up-form-inner {
+        width: calc(100% - 326px); } }
+    @media (min-width: 1440px) {
+      #sign-up-form-wrapper #sign-up-form.congrats #sign-up-form-inner {
+        width: calc(100% - 455px); } }
+    @media (min-width: 0px) {
+      #sign-up-form-wrapper #sign-up-form #sign-up-form-inner {
+        width: 100%;
+        float: left; } }
+    @media (min-width: 768px) {
+      #sign-up-form-wrapper #sign-up-form #sign-up-form-inner {
+        width: 100%;
+        float: left; } }
+    @media (min-width: 1024px) {
+      #sign-up-form-wrapper #sign-up-form #sign-up-form-inner {
+        width: calc(100% - 246px);
+        float: right; } }
+    @media (min-width: 1440px) {
+      #sign-up-form-wrapper #sign-up-form #sign-up-form-inner {
+        width: calc(100% - 356px);
+        float: right; } }
+    #sign-up-form-wrapper #sign-up-form .error {
+      font-family: 'azo_sansregular';
       float: left;
-      font-family: 'azo_sanslight';
-      color: #888888;
+      color: red;
+      font-size: .75rem;
+      margin: 0 0 13px 0; }
+    #sign-up-form-wrapper #sign-up-form #disclaimer {
       float: left;
-      font-size: .70em;
-      line-height: 1.2em;
-      padding: 0 0 0 22px;
-      margin: -2px 0 0 0; }
+      margin-top: 10px; }
+      @media (min-width: 0px) {
+        #sign-up-form-wrapper #sign-up-form #disclaimer {
+          width: 100%;
+          padding: 0 12px; } }
+      @media (min-width: 768px) {
+        #sign-up-form-wrapper #sign-up-form #disclaimer {
+          width: calc(100% - 170px);
+          padding: 0;
+          margin: 0; } }
+      #sign-up-form-wrapper #sign-up-form #disclaimer .disclaimer-text {
+        float: left;
+        font-family: 'azo_sanslight';
+        color: #888888;
+        float: left;
+        font-size: .70rem;
+        line-height: 1rem;
+        padding: 0 0 0 22px;
+        margin: -2px 0 0 0; }

@@ -81,21 +81,25 @@ class Form extends Component {
             button = <Button title="sign up" onclick={ updateFormState } data="congrats" isError={ isError } onError={ updateShowErrors } className="margin-bottom_48"/>
         }
         else if(signUpState.formState === 'congrats'){
-            h1 = <Heading headingType="h1" message={["Congratulations"]}/>;
+            h1 = <Heading headingType="h1" message={["Congratulations!"]}/>;
             h3 = <Heading headingType="h3" message={["Thank you for", "signing up!"]}/>;
             h4 = <Heading headingType="h4" message={["Look out for the latest news on your favorite shows."]}/>;
         }
 
         return(
-            <div id="sign-up-form" class={ signUpState.formState }>
-                { h1 }
-                { h2 }
-                { h3 }
-                { h4 }
-                { input }
-                { error }
-                { button }
-                { disclaimer }        
+            <div id="sign-up-form-wrapper">
+                <div id="sign-up-form" class={ signUpState.formState }>
+                    { h1 }
+                    <div id="sign-up-form-inner">
+                        { h2 }
+                        { h3 }
+                        { h4 }
+                        { input }
+                        { error }
+                        { button }
+                        { disclaimer }
+                    </div>        
+                </div>
             </div>
         )
     }

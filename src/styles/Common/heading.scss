@@ -2,36 +2,103 @@
     h1{
         font-family: 'elaine_d02_regularregular';
         color: #B6FDBF;
-        font-size: 2em;
         margin: 0 0 14px 0;
-        width: 100%;
         text-align: center;
         text-transform: lowercase;
+        float: left;
+        @include breakpoint(mobile) {
+            font-size: 2rem;          
+            width: 100%;
+        }
+        @include breakpoint(tablet-portrait) {
+            font-size: 2.75rem;
+            width: 100%;
+        }
+        @include breakpoint(tablet-landscape) {
+            font-size: 3.6rem;
+            width: auto;
+            position: absolute;
+            left: 0;
+            top: calc(50% - 1.8rem);
+        }
+        @include breakpoint(large) {
+            font-size: 5rem;
+            width: auto;
+            position: absolute;
+            left: 0;
+            top: calc(50% - 2.5rem);
+        }
     }
     h2{
         font-family: 'azo_sansbold';
         color: $light-grey-blue;
-        font-size: 1em;
         width: 100%;
-        text-align: center;
         text-transform: uppercase;
-        line-height: 1.25em;
-        margin-bottom: 10px;
         padding: 0 2px;
+        float: left;
         .line{       
             @extend %line;
+        }
+
+        @include breakpoint(mobile) {
+            font-size: 1rem;            
+            line-height: 1.25rem; 
+            margin-bottom: 10px; 
+            text-align: center;
+        }
+        @include breakpoint(tablet-portrait) {
+            font-size: 1.25rem;
+            line-height: 1.5rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        @include breakpoint(tablet-landscape) {
+            font-size: 1.25rem;
+            line-height: 1.5rem;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        @include breakpoint(large) {
+            font-size: 1.4rem;
+            line-height: 1.65rem;
+            margin-bottom: 27px;
+            text-align: left;
         }
     }
     h3{
         font-family: 'azo_sansbold';
         color: $light-grey-blue;
-        font-size: 1.4em;
+        font-size: 1.4rem;
         width: 100%;
         text-align: center;
         text-transform: capitalize;
-        line-height: 1.25em;
-        margin-bottom: 30px;
         padding: 0 20px;
+        float: left;
+        @include breakpoint(mobile) {
+            font-size: 1rem;            
+            line-height: 1.25rem; 
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        @include breakpoint(tablet-portrait) {
+            font-size: 2rem;
+            line-height: 2.25rem;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        @include breakpoint(tablet-landscape) {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            text-align: left;           
+            padding: 0;
+        }
+        @include breakpoint(large) {
+            font-size: 2.2rem;
+            margin-bottom: 24px;
+            text-align: left;
+            padding: 0;
+        }
+
         .line{       
             @extend %line;
         }
@@ -43,8 +110,27 @@
         width: 100%;
         text-align: center;
         line-height: 1.25em;
+        float: left;
+        @include breakpoint(mobile) {
+            font-size: 1rem;            
+            line-height: 1.25rem;  
+            text-align: center;
+        }
+        @include breakpoint(tablet-portrait) {
+            font-size: 1.4rem;
+            text-align: center;
+        }
+        @include breakpoint(tablet-landscape) {
+            font-size: 1.1rem;
+            text-align: left;
+        }
+        @include breakpoint(large) {
+            font-size: 1.2rem;
+            text-align: left;
+        }
+
         .line{       
             @extend %line;
         }
     }
-}
+} 
