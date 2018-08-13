@@ -78,7 +78,7 @@ class Form extends Component {
                             onclick={ updateFormState } data="congrats" isError={ isError } onError={ updateShowErrors }
                         />
                     </div>;
-            button = <Button title="sign up" onclick={ updateFormState } data="congrats" isError={ isError } onError={ updateShowErrors } className="margin-bottom_48"/>
+            button = <Button title="sign up" onclick={ updateFormState } data="congrats" isError={ isError } onError={ updateShowErrors }/>
         }
         else if(signUpState.formState === 'congrats'){
             h1 = <Heading headingType="h1" message={["Congratulations!"]}/>;
@@ -95,8 +95,8 @@ class Form extends Component {
                         { h3 }
                         { h4 }
                         { input }
+                        { button }                       
                         { error }
-                        { button }
                         { disclaimer }
                     </div>        
                 </div>

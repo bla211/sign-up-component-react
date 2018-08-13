@@ -23,7 +23,7 @@
         @include breakpoint(large) {
             max-width: 1006px;
         }
-        &.email, &.name{
+        &.email{
             @include breakpoint(mobile) {
                 padding: 20px 20px 35px 20px;
             }
@@ -37,18 +37,32 @@
                 padding: 47px 0 42px 0;
             }
         }
-        &.congrats{
-            @include breakpoint(mobile) {              
-                padding: 61px 20px 61px 20px;
+        &.name{
+            @include breakpoint(mobile) {
+                padding: 20px 20px 91px 20px;
             }
-            @include breakpoint(tablet-portrait) {         
-                padding: 61px 20px 61px 20px;
+            @include breakpoint(tablet-portrait) {
+                padding: 20px 0 65px 0;
             }
-            @include breakpoint(tablet-landscape) {             
-                padding: 61px 20px 61px 20px;
+            @include breakpoint(tablet-landscape) {
+                padding: 47px 0 72px 0;
             }
-            @include breakpoint(large) {               
-                padding: 61px 20px 61px 20px;
+            @include breakpoint(large) {
+                padding: 47px 0 72px 0;
+            }
+        }
+        &.congrats{                    
+            @include breakpoint(mobile) {
+                padding: 68px 20px 68px 20px;
+            }
+            @include breakpoint(tablet-portrait) {
+                padding: 41px 20px 41px 20px;
+            }
+            @include breakpoint(tablet-landscape) {
+                padding: 68px 20px 68px 20px;
+            }
+            @include breakpoint(large) {
+                padding: 74px 20px 75px 20px;
             }
 
             #sign-up-form-inner{               
@@ -83,9 +97,16 @@
         .error{
             font-family: 'azo_sansregular';
             float: left;
+            width: 100%;
             color: red;
             font-size: .75rem;
-            margin: 0 0 13px 0;
+            
+            @include breakpoint(mobile) {
+                margin: 13px 0 13px 0;
+            }
+            @include breakpoint(tablet-portrait) {
+                margin: 0 0 13px 0;
+            }
         }
 
         #disclaimer{
@@ -99,10 +120,6 @@
                 width: calc(100% - 170px);
                 padding: 0;
                 margin: 0;
-            }
-            @include breakpoint(tablet-landscape) {
-            }
-            @include breakpoint(large) {
             }
             .disclaimer-text{
                 float: left;

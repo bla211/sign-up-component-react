@@ -93,9 +93,6 @@ button {
       width: 150px;
       font-size: 1.25rem; } }
 
-.margin-bottom_48 {
-  margin-bottom: 48px; }
-
 .checkbox-wrapper {
   display: block;
   position: relative;
@@ -163,14 +160,14 @@ button {
       width: auto;
       position: absolute;
       left: 0;
-      top: calc(50% - 1.8rem); } }
+      top: calc(222px/2 - 3.6rem/2); } }
   @media (min-width: 1440px) {
     #sign-up-form h1 {
       font-size: 5rem;
       width: auto;
       position: absolute;
       left: 0;
-      top: calc(50% - 2.5rem); } }
+      top: calc(229px/2 - 5rem/2); } }
 
 #sign-up-form h2 {
   font-family: 'azo_sansbold';
@@ -187,20 +184,17 @@ button {
       text-align: center; } }
   @media (min-width: 768px) {
     #sign-up-form h2 {
-      font-size: 1.25rem;
-      line-height: 1.5rem;
+      font-size: 1.13rem;
       margin-bottom: 20px;
       text-align: center; } }
   @media (min-width: 1024px) {
     #sign-up-form h2 {
-      font-size: 1.25rem;
-      line-height: 1.5rem;
+      font-size: 1.13rem;
       margin-bottom: 20px;
       text-align: left; } }
   @media (min-width: 1440px) {
     #sign-up-form h2 {
-      font-size: 1.4rem;
-      line-height: 1.65rem;
+      font-size: 1.36rem;
       margin-bottom: 27px;
       text-align: left; } }
 
@@ -215,8 +209,8 @@ button {
   float: left; }
   @media (min-width: 0px) {
     #sign-up-form h3 {
-      font-size: 1rem;
-      line-height: 1.25rem;
+      font-size: 1.6rem;
+      line-height: 1.85rem;
       margin-bottom: 30px;
       text-align: center; } }
   @media (min-width: 768px) {
@@ -266,7 +260,15 @@ button {
 
 #input-wrapper {
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  width: 100%;
+  float: left; }
+  @media (min-width: 0px) {
+    #input-wrapper {
+      width: 100%; } }
+  @media (min-width: 768px) {
+    #input-wrapper {
+      width: calc(100% - 170px); } }
 
 .full-width, .half-width {
   -webkit-appearance: none;
@@ -383,29 +385,41 @@ button {
       #sign-up-form-wrapper #sign-up-form {
         max-width: 1006px; } }
     @media (min-width: 0px) {
-      #sign-up-form-wrapper #sign-up-form.email, #sign-up-form-wrapper #sign-up-form.name {
+      #sign-up-form-wrapper #sign-up-form.email {
         padding: 20px 20px 35px 20px; } }
     @media (min-width: 768px) {
-      #sign-up-form-wrapper #sign-up-form.email, #sign-up-form-wrapper #sign-up-form.name {
+      #sign-up-form-wrapper #sign-up-form.email {
         padding: 20px 0 35px 0; } }
     @media (min-width: 1024px) {
-      #sign-up-form-wrapper #sign-up-form.email, #sign-up-form-wrapper #sign-up-form.name {
+      #sign-up-form-wrapper #sign-up-form.email {
         padding: 47px 0 42px 0; } }
     @media (min-width: 1440px) {
-      #sign-up-form-wrapper #sign-up-form.email, #sign-up-form-wrapper #sign-up-form.name {
+      #sign-up-form-wrapper #sign-up-form.email {
         padding: 47px 0 42px 0; } }
     @media (min-width: 0px) {
+      #sign-up-form-wrapper #sign-up-form.name {
+        padding: 20px 20px 91px 20px; } }
+    @media (min-width: 768px) {
+      #sign-up-form-wrapper #sign-up-form.name {
+        padding: 20px 0 65px 0; } }
+    @media (min-width: 1024px) {
+      #sign-up-form-wrapper #sign-up-form.name {
+        padding: 47px 0 72px 0; } }
+    @media (min-width: 1440px) {
+      #sign-up-form-wrapper #sign-up-form.name {
+        padding: 47px 0 72px 0; } }
+    @media (min-width: 0px) {
       #sign-up-form-wrapper #sign-up-form.congrats {
-        padding: 61px 20px 61px 20px; } }
+        padding: 68px 20px 68px 20px; } }
     @media (min-width: 768px) {
       #sign-up-form-wrapper #sign-up-form.congrats {
-        padding: 61px 20px 61px 20px; } }
+        padding: 41px 20px 41px 20px; } }
     @media (min-width: 1024px) {
       #sign-up-form-wrapper #sign-up-form.congrats {
-        padding: 61px 20px 61px 20px; } }
+        padding: 68px 20px 68px 20px; } }
     @media (min-width: 1440px) {
       #sign-up-form-wrapper #sign-up-form.congrats {
-        padding: 61px 20px 61px 20px; } }
+        padding: 74px 20px 75px 20px; } }
     @media (min-width: 1024px) {
       #sign-up-form-wrapper #sign-up-form.congrats #sign-up-form-inner {
         width: calc(100% - 326px); } }
@@ -431,9 +445,15 @@ button {
     #sign-up-form-wrapper #sign-up-form .error {
       font-family: 'azo_sansregular';
       float: left;
+      width: 100%;
       color: red;
-      font-size: .75rem;
-      margin: 0 0 13px 0; }
+      font-size: .75rem; }
+      @media (min-width: 0px) {
+        #sign-up-form-wrapper #sign-up-form .error {
+          margin: 13px 0 13px 0; } }
+      @media (min-width: 768px) {
+        #sign-up-form-wrapper #sign-up-form .error {
+          margin: 0 0 13px 0; } }
     #sign-up-form-wrapper #sign-up-form #disclaimer {
       float: left;
       margin-top: 10px; }

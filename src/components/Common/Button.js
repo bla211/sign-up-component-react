@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 class Button extends Component {
     render(){
-        const { title, data, className, isError, onError } = this.props;
+        const { title, data, isError, onError } = this.props;
         let { onclick } = this.props;
         
         if(isError){
@@ -14,7 +14,7 @@ class Button extends Component {
 
 
         return(
-            <button onClick={ () => onclick(data) } class={ className }>{ title }</button>
+            <button onClick={ () => onclick(data) }>{ title }</button>
         )
     }
 
@@ -24,7 +24,6 @@ Button.propTypes = {
     title: PropTypes.string,
     onclick: PropTypes.func,
     data: PropTypes.string,
-    className: PropTypes.string,
     isError: PropTypes.bool,
     onError: PropTypes.string
   };

@@ -19,14 +19,14 @@
             width: auto;
             position: absolute;
             left: 0;
-            top: calc(50% - 1.8rem);
+            top: calc(222px/2 - 3.6rem/2);
         }
         @include breakpoint(large) {
             font-size: 5rem;
             width: auto;
             position: absolute;
             left: 0;
-            top: calc(50% - 2.5rem);
+            top: calc(229px/2 - 5rem/2);
         }
     }
     h2{
@@ -47,20 +47,17 @@
             text-align: center;
         }
         @include breakpoint(tablet-portrait) {
-            font-size: 1.25rem;
-            line-height: 1.5rem;
+            font-size: 1.13rem;
             margin-bottom: 20px;
             text-align: center;
         }
         @include breakpoint(tablet-landscape) {
-            font-size: 1.25rem;
-            line-height: 1.5rem;
+            font-size: 1.13rem;
             margin-bottom: 20px;
             text-align: left;
         }
         @include breakpoint(large) {
-            font-size: 1.4rem;
-            line-height: 1.65rem;
+            font-size: 1.36rem;
             margin-bottom: 27px;
             text-align: left;
         }
@@ -75,8 +72,8 @@
         padding: 0 20px;
         float: left;
         @include breakpoint(mobile) {
-            font-size: 1rem;            
-            line-height: 1.25rem; 
+            font-size: 1.6rem;            
+            line-height: 1.85rem; 
             margin-bottom: 30px;
             text-align: center;
         }

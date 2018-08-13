@@ -1,6 +1,14 @@
 #input-wrapper{
     display: flex;
     justify-content: space-between;
+    width: 100%;
+    float: left;
+    @include breakpoint(mobile) {      
+        width: 100%;
+    }
+    @include breakpoint(tablet-portrait) {
+        width: calc(100% - 170px);
+    } 
 }
 
 %input {        
@@ -61,11 +69,7 @@
     }
     @include breakpoint(tablet-portrait) {
         width: calc(100% - 170px);
-    }
-    @include breakpoint(tablet-landscape) {
-    }
-    @include breakpoint(large) {
-    }    
+    }  
 }
 
 .half-width{
