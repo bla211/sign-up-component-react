@@ -17,6 +17,9 @@
         color: $light-grey-blue;
         font-size: 1em;
     }
+    &.is-not-valid{
+        background: rgba(255,0,0,.2);
+    }
 }
 
 .full-width{

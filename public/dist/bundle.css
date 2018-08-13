@@ -94,8 +94,6 @@ button {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none; }
-  .checkbox-wrapper:hover input ~ .checkmark {
-    background-color: #ccc; }
   .checkbox-wrapper input {
     position: absolute;
     opacity: 0;
@@ -103,7 +101,7 @@ button {
     left: 0;
     cursor: pointer; }
     .checkbox-wrapper input:checked ~ .checkmark {
-      background-color: #FFFFFF; }
+      background: #FFFFFF; }
       .checkbox-wrapper input:checked ~ .checkmark:after {
         display: block; }
   .checkbox-wrapper .checkmark {
@@ -112,9 +110,12 @@ button {
     left: 0;
     height: 12px;
     width: 12px;
-    background-color: #eee;
+    background: #eee;
     border: 1px solid #9B9B9B;
     border-radius: 2px; }
+    .checkbox-wrapper .checkmark.is-not-valid {
+      background: rgba(255, 0, 0, 0.2);
+      border: 1px solid rgba(255, 0, 0, 0.1); }
     .checkbox-wrapper .checkmark:after {
       content: "";
       position: absolute;
@@ -198,6 +199,8 @@ button {
     font-family: 'azo_sansregular';
     color: #94AEBF;
     font-size: 1em; }
+  .is-not-valid.full-width, .is-not-valid.half-width {
+    background: rgba(255, 0, 0, 0.2); }
 
 .full-width {
   width: 100%; }

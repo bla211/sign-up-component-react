@@ -20,8 +20,11 @@ class Heading extends Component {
             case 'h4':
                 heading = <h4>{ lines }</h4>;
                 break;
+            case 'h5':
+                heading = <h5>{ lines }</h5>;
+                break;
             default:
-                heading = <h1>{ lines }</h1>;  
+                heading = <span>{ lines }</span>;  
         }
 
         return(

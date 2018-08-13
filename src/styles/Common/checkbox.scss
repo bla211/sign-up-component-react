@@ -2,9 +2,6 @@
     display: block;
     position: relative;
     float: left;
-    &:hover input ~ .checkmark{
-        background-color: #ccc;    
-    }
     cursor: pointer;
     font-size: 22px;
     -webkit-user-select: none;
@@ -18,7 +15,7 @@
         left:0;
         cursor: pointer;
         &:checked ~ .checkmark{                    
-            background-color: #FFFFFF; 
+            background: #FFFFFF; 
             &:after{
                 display: block;
             }     
@@ -30,9 +27,13 @@
         left: 0;
         height: 12px;
         width: 12px;
-        background-color: #eee;
+        background: #eee;
         border: 1px solid #9B9B9B;
         border-radius: 2px;
+        &.is-not-valid{
+            background: rgba(255,0,0,.2);
+            border: 1px solid rgba(255,0,0,.1);
+        }
         &:after{
             content: "";
             position: absolute;

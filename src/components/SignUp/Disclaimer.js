@@ -4,11 +4,11 @@ import Checkbox from '../Common/Checkbox';
 
 class Disclaimer extends Component {
     render(){
-        const { isChecked, toggleChecked } = this.props;
+        const { isChecked, toggleChecked, className } = this.props;
 
         return(
             <div id="disclaimer">
-                <Checkbox isChecked={ isChecked } toggleChecked={ toggleChecked }/>
+                <Checkbox isChecked={ isChecked } toggleChecked={ toggleChecked } className={ className }/>
                 <p class="disclaimer-text">
                     I agree to receive information from Discovery Communications in accordance with the following Privacy Policy
                 </p>
@@ -20,7 +20,8 @@ class Disclaimer extends Component {
 
 Disclaimer.propTypes = {
     isChecked: PropTypes.bool,
-    toggleChecked: PropTypes.string
+    toggleChecked: PropTypes.string,
+    className: PropTypes.string
   };
 
 export default Disclaimer;
