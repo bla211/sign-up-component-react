@@ -6,7 +6,7 @@ class ErrorMessage extends Component {
         const { errorMessage } = this.props;
 
         return(
-            <div class="error">{ errorMessage }</div>
+            <div className="error">{ errorMessage }</div>
         )
     }
 
