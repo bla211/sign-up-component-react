@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 class Input extends Component {
     render(){
-        const { placeholder, className, val, handleChange, type, autoFocus, onclick, isError, data, onError} = this.props;
+        const { placeholder, className, val, handleChange, type, autoFocus, onclick, isError, data, onError, inputName} = this.props;
         
         let classNames;
         if(className !== undefined){
@@ -24,7 +24,7 @@ class Input extends Component {
         return(
             <input type={ type } placeholder={ placeholder } 
                 className={ classNames } value={ val } onChange={ (event) => handleChange(event.target.value) }
-                onKeyPress={ (event) => handleKeyPress(event) } autoFocus={ autoFocus }
+                onKeyPress={ (event) => handleKeyPress(event) } autoFocus={ autoFocus } name={inputName}
             />
         )
     }
@@ -41,7 +41,8 @@ Input.propTypes = {
     onclick: PropTypes.func,
     data: PropTypes.string,
     isError: PropTypes.bool,
-    onError: PropTypes.func
+    onError: PropTypes.func,
+    inputName: PropTypes.string
   };
 
 export default Input;
