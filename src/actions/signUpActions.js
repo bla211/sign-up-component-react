@@ -7,17 +7,17 @@ export const UPDATE_SHOW_ERRORS = 'UPDATE_SHOW_ERRORS';
 
 export const updateEmail = (payload) => ({
     type: UPDATE_EMAIL,
-    payload: payload.target.value
+    payload: payload
 });
 
 export const updateFirstName = (payload) => ({
   type: UPDATE_FIRST_NAME,
-  payload: payload.target.value
+  payload: payload
 });
 
 export const updateLastName = (payload) => ({
   type: UPDATE_LAST_NAME,
-  payload: payload.target.value
+  payload: payload
 });
 
 export const toggleAgreesToDisclaimer = () => ({

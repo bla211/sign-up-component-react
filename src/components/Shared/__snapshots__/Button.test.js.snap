@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test Button component Button renders properly when passed {title} 1`] = `
+<button
+  onClick={[Function]}
+>
+  Next
+</button>
+`;
