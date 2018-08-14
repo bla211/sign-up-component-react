@@ -48,16 +48,20 @@ const signUp = (state = {
                 }
             }
         case UPDATE_FORM_STATE:
-        return {...state,
-            formState: action.payload,
-            showErrors: false
-        }
+            if(action.payload === 'congrats'){
+            //http request goes here
+                console.log(state.userInfo); 
+            }
+            return {...state,
+                formState: action.payload,
+                showErrors: false
+            }
         case UPDATE_SHOW_ERRORS:
-        return {...state,
-            showErrors: action.payload
-        }
-      default:
-        return state
+            return {...state,
+                showErrors: action.payload
+            }
+        default:
+            return state
     }
   }
   
