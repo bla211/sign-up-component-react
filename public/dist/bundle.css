@@ -200,6 +200,9 @@ button {
   button:hover {
     background: white;
     color: #ED1F34; }
+  button:active {
+    background: #ED1F34;
+    color: white; }
   @media (min-width: 0px) {
     button {
       width: 100%;
