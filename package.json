@@ -17,6 +17,7 @@
     "redux-thunk": "^2.1.0"
   },
   "devDependencies": {
+    "@storybook/react": "^3.4.10",
     "babel-core": "^6.26.3",
     "babel-eslint": "^8.2.3",
     "babel-loader": "^7.1.4",
@@ -42,7 +43,8 @@
     "dev": "webpack-dev-server --content-base src --inline --hot",
     "build": "webpack",
     "watch": "webpack --watch",
-    "lint": "./node_modules/.bin/eslint ./src"
+    "lint": "./node_modules/.bin/eslint ./src",
+    "storybook": "start-storybook -p 9001 -c .storybook"
   },
   "author": "BA",
   "license": "MIT"

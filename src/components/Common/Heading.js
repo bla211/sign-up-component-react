@@ -6,7 +6,7 @@ class Heading extends Component {
         const { headingType, message } = this.props;
 
         let heading;    
-        const lines = message.map((line) => <span class="line">{ line }</span>);  
+        const lines = message.map((line, index) => <span className="line" key={index}>{ line }</span>);  
         switch(headingType){
             case 'h1':
                 heading = <h1>{ lines }</h1>;
@@ -37,7 +37,7 @@ class Heading extends Component {
 
 Heading.propTypes = {
     headingType: PropTypes.string,
-    message: PropTypes.arr
+    message: PropTypes.array
   };
 
 export default Heading;

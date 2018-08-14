@@ -6,9 +6,9 @@ class Checkbox extends Component {
         const { isChecked, toggleChecked, className } = this.props;
         const checkMarkClasses = ["checkmark", className]
         return(    
-            <label class="checkbox-wrapper">
+            <label className="checkbox-wrapper">
                 <input type="checkbox" checked={ isChecked } onChange={ () => toggleChecked() }/>
-                <span class={ checkMarkClasses.join(' ') }></span>
+                <span className={ checkMarkClasses.join(' ') }></span>
             </label>
         )
     }

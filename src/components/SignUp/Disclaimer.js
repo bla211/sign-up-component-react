@@ -9,7 +9,7 @@ class Disclaimer extends Component {
         return(
             <div id="disclaimer">
                 <Checkbox isChecked={ isChecked } toggleChecked={ toggleChecked } className={ className }/>
-                <p class="disclaimer-text">
+                <p className="disclaimer-text">
                     { disclaimerMessage }
                 </p>
             </div>

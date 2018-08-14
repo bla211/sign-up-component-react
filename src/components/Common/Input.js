@@ -22,10 +22,11 @@ class Input extends Component {
 
     render(){
         const { placeholder, className, val, handleChange, type, autofocus} = this.props;
+        const classNames = className.join(' ');
         return(
-            <input class="full-width" type={ type } placeholder={ placeholder } 
-                class={ className.join(' ') } value={ val } onChange={ (event) => handleChange(event) }
-                onKeyPress={ this.handleKeyPress } autofocus={ autofocus }
+            <input type={ type } placeholder={ placeholder } 
+                className={ classNames } value={ val } onChange={ (event) => handleChange(event) }
+                onKeyPress={ this.handleKeyPress } autoFocus={ autofocus }
             />
         )
     }
@@ -33,7 +34,7 @@ class Input extends Component {
 
 Input.propTypes = {
     placeholder: PropTypes.string,
-    className: PropTypes.arr,
+    className: PropTypes.array,
     val: PropTypes.string,
     handleChange: PropTypes.func,
     type: PropTypes.string,

@@ -25,7 +25,7 @@ Button.propTypes = {
     onclick: PropTypes.func,
     data: PropTypes.string,
     isError: PropTypes.bool,
-    onError: PropTypes.string
+    onError: PropTypes.func
   };
 
 export default Button;
