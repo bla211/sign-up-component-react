@@ -19,6 +19,10 @@ button{
         background: white;
         color: $button-red;
     }
+    &:active{
+        background: $button-red;
+        color: white;
+    }
 
     @include breakpoint(mobile) {
         width: 100%;
