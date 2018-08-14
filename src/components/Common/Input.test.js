@@ -16,4 +16,13 @@ describe('Test Input component', () => {
         const wrapper = shallow(<Input placeholder={placeholder} className={className} val={val} type={type} autofocus={autofocus}/>);
         expect(wrapper).toMatchSnapshot()
     });
+
+    test('Input passes val on change', () => {
+        const className = ['className'];
+        const handleChange = jest.fn();
+        const val = ''; 
+        const wrapper = shallow(<Input val={val} handleChange={handleChange} className={className}/>);
+        wrapper.find('input').simulate('change', { target: { value: 'value' } })
+        expect(handleChange).toHaveBeenCalledWith('value');
+    });
 });

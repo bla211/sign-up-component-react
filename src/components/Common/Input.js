@@ -19,7 +19,7 @@ class Input extends Component {
 
         return(
             <input type={ type } placeholder={ placeholder } 
-                className={ classNames } value={ val } onChange={ (event) => handleChange(event) }
+                className={ classNames } value={ val } onChange={ (event) => handleChange(event.target.value) }
                 onKeyPress={ handleKeyPress } autoFocus={ autofocus }
             />
         )

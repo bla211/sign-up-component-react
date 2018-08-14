@@ -7,7 +7,7 @@ export const UPDATE_SHOW_ERRORS = 'UPDATE_SHOW_ERRORS';
 
 export const updateEmail = (payload) => ({
     type: UPDATE_EMAIL,
-    payload: payload.target.value
+    payload: payload
 });
 
 export const updateFirstName = (payload) => ({
