@@ -2,7 +2,6 @@
 
 exports[`Test Input component Input renders properly when passed props 1`] = `
 <input
-  autoFocus={false}
   className="className"
   onChange={[Function]}
   onKeyPress={[Function]}

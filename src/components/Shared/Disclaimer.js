@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Checkbox from '../Common/Checkbox';
+import Checkbox from '../Shared/Checkbox';
 
 class Disclaimer extends Component {
     render(){

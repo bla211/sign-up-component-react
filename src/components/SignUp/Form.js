@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Button from '../Common/Button';
-import Disclaimer from '../SignUp/Disclaimer';
-import ErrorMessage from '../Common/ErrorMessage';
-import Heading from '../Common/Heading';
-import Input from '../Common/Input';
+import Button from '../Shared/Button';
+import Disclaimer from '../Shared/Disclaimer';
+import ErrorMessage from '../Shared/ErrorMessage';
+import Heading from '../Shared/Heading';
+import Input from '../Shared/Input';
 
 class Form extends Component {
     render(){
-        const { signUpState, updateEmail, updateFirstName, updateLastName, toggleAgreesToDisclaimer, updateFormState, updateShowErrors } = this.props;
-        
+        const { signUpState, updateEmail, updateFirstName, updateLastName, toggleAgreesToDisclaimer, updateFormState, updateShowErrors } = this.props;  
         let input, button, h1, h2, h3, h4, disclaimer, errorMessage = '', isError = false, error;
         const errorClass = 'is-not-valid';
+        const autoFocus = true;
         if(signUpState.formState === 'email'){
             h1 = <Heading headingType="h1" message={["Join the list"]}/>;
             h2 = <Heading headingType="h2" message={ ["Sign up for", "the TLC newsletter"] }/>;            
@@ -70,7 +70,7 @@ class Form extends Component {
             }
             input = <div id="input-wrapper">
                         <Input placeholder="First Name" className={ ["half-width", firstNameError] }
-                            val={ signUpState.userInfo.name.first } handleChange={ updateFirstName } autofocus="true"
+                            val={ signUpState.userInfo.name.first } handleChange={ updateFirstName } autoFocus={autoFocus}
                             onclick={ updateFormState } data="name" isError={ isError } onError={ updateShowErrors }
                         />
                         <Input placeholder="Last Name" className={ ["half-width", lastNameError] }
