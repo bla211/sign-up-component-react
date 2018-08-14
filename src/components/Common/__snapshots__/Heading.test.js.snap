@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test Heading component Heading renders properly when passed "headingType === "h1"" and a one line nessage 1`] = `
+<div>
+  <h1>
+    <span
+      className="line"
+      key="0"
+    >
+      message 1
+    </span>
+  </h1>
+</div>
+`;
+
+exports[`Test Heading component Heading renders properly when passed "headingType === "h1"" and a two line nessage 1`] = `
+<div>
+  <h1>
+    <span
+      className="line"
+      key="0"
+    >
+      message 1
+    </span>
+    <span
+      className="line"
+      key="1"
+    >
+      message 2
+    </span>
+  </h1>
+</div>
+`;
+
+exports[`Test Heading component Heading renders properly when passed "headingType === "h1"" and no message 1`] = `
+<div>
+  <h1 />
+</div>
+`;
