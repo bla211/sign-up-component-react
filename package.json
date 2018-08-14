@@ -4,13 +4,19 @@
   "description": "React component for signing up new users",
   "watch": true,
   "dependencies": {
+    "babel-jest": "^23.4.2",
+    "babel-preset-env": "^1.7.0",
+    "enzyme": "^3.4.1",
+    "enzyme-adapter-react-16": "^1.2.0",
     "history": "^1.17.0",
+    "jest": "^23.5.0",
     "npm": "^6.3.0",
     "prop-types": "^15.6.1",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
     "react-redux": "^5.0.7",
     "react-router-dom": "^4.3.1",
+    "react-test-renderer": "^16.4.2",
     "redux": "^3.7.2",
     "redux-logger": "^2.6.1",
     "redux-promise-middleware": "^3.2.0",
@@ -27,6 +33,7 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
     "css-loader": "^0.28.11",
+    "enzyme-to-json": "^3.3.4",
     "eslint": "^4.19.1",
     "eslint-loader": "^1.9.0",
     "eslint-plugin-react": "^7.8.2",
@@ -44,7 +51,13 @@
     "build": "webpack",
     "watch": "webpack --watch",
     "lint": "./node_modules/.bin/eslint ./src",
-    "storybook": "start-storybook -p 9001 -c .storybook"
+    "storybook": "start-storybook -p 9001 -c .storybook",
+    "test": "jest"
+  },
+  "jest": {
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ]
   },
   "author": "BA",
   "license": "MIT"
