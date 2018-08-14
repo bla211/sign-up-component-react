@@ -7,13 +7,13 @@ import Button from './Button';
 configure({ adapter: new Adapter() });
 
 describe('Test Button component', () => {
-    test('Button renders passed title', () => {
+    test('Button renders {title}', () => {
         const title = "Next";
         const wrapper = shallow(<Button title={title}/>);
         expect(wrapper).toMatchSnapshot();
     });
     
-    test('Button fires show errors when clicked if error exists', () => {
+    test('Button fires onError function on click if "isError === true"', () => {
         const isError = true;
         const onError = jest.fn(); 
         const wrapper = shallow(<Button isError={isError} onError={onError}/>);
@@ -21,7 +21,7 @@ describe('Test Button component', () => {
         expect(onError).toHaveBeenCalled();
     });
 
-    test('Button fires on click and passes data if no error', () => {
+    test('Button fires onclick function and passes {data} if no error', () => {
         const isError = false;
         const onclick = jest.fn();
         const data = 'payload'; 

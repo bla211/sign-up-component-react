@@ -12,12 +12,12 @@ export const updateEmail = (payload) => ({
 
 export const updateFirstName = (payload) => ({
   type: UPDATE_FIRST_NAME,
-  payload: payload.target.value
+  payload: payload
 });
 
 export const updateLastName = (payload) => ({
   type: UPDATE_LAST_NAME,
-  payload: payload.target.value
+  payload: payload
 });
 
 export const toggleAgreesToDisclaimer = () => ({

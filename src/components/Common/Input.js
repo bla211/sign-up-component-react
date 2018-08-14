@@ -20,7 +20,7 @@ class Input extends Component {
         return(
             <input type={ type } placeholder={ placeholder } 
                 className={ classNames } value={ val } onChange={ (event) => handleChange(event.target.value) }
-                onKeyPress={ handleKeyPress } autoFocus={ autofocus }
+                onKeyPress={ (event) => handleKeyPress(event) } autoFocus={ autofocus }
             />
         )
     }
@@ -37,7 +37,7 @@ Input.propTypes = {
     onclick: PropTypes.func,
     data: PropTypes.string,
     isError: PropTypes.bool,
-    onError: PropTypes.string
+    onError: PropTypes.func
   };
 
 export default Input;
