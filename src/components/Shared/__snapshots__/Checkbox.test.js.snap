@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test Checkbox component Checkbox renders properly when passed "isChecked === false" 1`] = `
+<label
+  className="checkbox-wrapper"
+>
+  <input
+    checked={false}
+    onChange={[Function]}
+    type="checkbox"
+  />
+  <span
+    className="checkmark "
+  />
+</label>
+`;
+
+exports[`Test Checkbox component Checkbox renders properly when passed "isChecked === true" 1`] = `
+<label
+  className="checkbox-wrapper"
+>
+  <input
+    checked={true}
+    onChange={[Function]}
+    type="checkbox"
+  />
+  <span
+    className="checkmark "
+  />
+</label>
+`;
