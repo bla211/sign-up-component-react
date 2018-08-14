@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Button from '../Common/Button';
 import Disclaimer from '../SignUp/Disclaimer';
-import ErrorMessage from '../SignUp/ErrorMessage';
+import ErrorMessage from '../Common/ErrorMessage';
 import Heading from '../Common/Heading';
 import Input from '../Common/Input';
 

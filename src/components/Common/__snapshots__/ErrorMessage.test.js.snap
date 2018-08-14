@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test ErrorMessage component Disclaimer renders properly when passed "disclaimerMessage" 1`] = `
+<div
+  className="error"
+>
+  *error message
+</div>
+`;

@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test Disclaimer component Disclaimer renders properly when passed "disclaimerMessage" 1`] = `
+<div
+  id="disclaimer"
+>
+  <Checkbox />
+  <p
+    className="disclaimer-text"
+  >
+    message goes here
+  </p>
+</div>
+`;

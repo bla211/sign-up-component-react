@@ -7,7 +7,7 @@ import Heading from './Heading';
 configure({ adapter: new Adapter() });
 
 describe('Test Heading component', () => {
-    test('Heading renders properly when passed "headingType === "h1"" and no message', () => {
+    test('Heading renders properly when passed {headingType} and no message', () => {
         const headingType = 'h1';
         const message = [];
         const wrapper = shallow(<Heading headingType={headingType} message={message}/>);
@@ -16,7 +16,7 @@ describe('Test Heading component', () => {
 });
 
 describe('Test Heading component', () => {
-    test('Heading renders properly when passed "headingType === "h1"" and a one line nessage', () => {
+    test('Heading renders properly when passed {headingType} and a one line nessage', () => {
         const headingType = 'h1';
         const message = ['message 1'];
         const wrapper = shallow(<Heading headingType={headingType} message={message}/>);
@@ -25,7 +25,7 @@ describe('Test Heading component', () => {
 });
 
 describe('Test Heading component', () => {
-    test('Heading renders properly when passed "headingType === "h1"" and a two line nessage', () => {
+    test('Heading renders properly when passed {headingType} and a two line nessage', () => {
         const headingType = 'h1';
         const message = ['message 1', 'message 2'];
         const wrapper = shallow(<Heading headingType={headingType} message={message}/>);

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Test Heading component Heading renders properly when passed "headingType === "h1"" and a one line nessage 1`] = `
+exports[`Test Heading component Heading renders properly when passed {headingType} and a one line nessage 1`] = `
 <div>
   <h1>
     <span
@@ -13,7 +13,7 @@ exports[`Test Heading component Heading renders properly when passed "headingTyp
 </div>
 `;
 
-exports[`Test Heading component Heading renders properly when passed "headingType === "h1"" and a two line nessage 1`] = `
+exports[`Test Heading component Heading renders properly when passed {headingType} and a two line nessage 1`] = `
 <div>
   <h1>
     <span
@@ -32,7 +32,7 @@ exports[`Test Heading component Heading renders properly when passed "headingTyp
 </div>
 `;
 
-exports[`Test Heading component Heading renders properly when passed "headingType === "h1"" and no message 1`] = `
+exports[`Test Heading component Heading renders properly when passed {headingType} and no message 1`] = `
 <div>
   <h1 />
 </div>
