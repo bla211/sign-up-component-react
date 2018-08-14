@@ -34,12 +34,12 @@ class Form extends Component {
 
             if(signUpState.showErrors){
                 error = <ErrorMessage errorMessage={ errorMessage }/>
-                emailError ? emailError = errorClass : disclaimerError = '';
+                emailError ? emailError = errorClass : emailError = '';
                 disclaimerError ? disclaimerError = errorClass : disclaimerError = '';
             }
             input = <Input placeholder="enter email address" type="text" className={ ["full-width", emailError] }
                         val={ signUpState.userInfo.email } handleChange={ updateEmail }
-                        onclick={ updateFormState } data="name" isError={ isError } onError={ updateShowErrors }
+                        onclick={ updateFormState } data="name" isError={ isError } onError={ updateShowErrors } inputName="email"
                     />;
             button = <Button title="next" onclick={ updateFormState } data="name" isError={ isError } onError={ updateShowErrors }/>
             const disclaimerMessage = "I agree to receive information from Discovery Communications in accordance with the following Privacy Policy"
@@ -71,11 +71,11 @@ class Form extends Component {
             input = <div id="input-wrapper">
                         <Input placeholder="First Name" className={ ["half-width", firstNameError] }
                             val={ signUpState.userInfo.name.first } handleChange={ updateFirstName } autoFocus={autoFocus}
-                            onclick={ updateFormState } data="name" isError={ isError } onError={ updateShowErrors }
+                            onclick={ updateFormState } data="name" isError={ isError } onError={ updateShowErrors } inputName="given-name"
                         />
                         <Input placeholder="Last Name" className={ ["half-width", lastNameError] }
                             val={ signUpState.userInfo.name.last } handleChange={ updateLastName }
-                            onclick={ updateFormState } data="congrats" isError={ isError } onError={ updateShowErrors }
+                            onclick={ updateFormState } data="congrats" isError={ isError } onError={ updateShowErrors } inputName="family-name"
                         />
                     </div>;
             button = <Button title="sign up" onclick={ updateFormState } data="congrats" isError={ isError } onError={ updateShowErrors }/>
