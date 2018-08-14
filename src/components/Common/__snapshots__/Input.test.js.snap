@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test Input component Input renders HTML when passed props 1`] = `
+<input
+  autoFocus={false}
+  className="className"
+  onChange={[Function]}
+  onKeyPress={[Function]}
+  placeholder="placeholder text"
+  type="text"
+  value="value"
+/>
+`;
