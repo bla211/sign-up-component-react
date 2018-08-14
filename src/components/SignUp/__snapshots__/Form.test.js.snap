@@ -1,0 +1,164 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test Form component Form renders properly when passed props 1`] = `
+<div
+  id="sign-up-form-wrapper"
+>
+  <div
+    className="email"
+    id="sign-up-form"
+  >
+    <Heading
+      headingType="h1"
+      message={
+        Array [
+          "Join the list",
+        ]
+      }
+    />
+    <div
+      id="sign-up-form-inner"
+    >
+      <Heading
+        headingType="h2"
+        message={
+          Array [
+            "Sign up for",
+            "the TLC newsletter",
+          ]
+        }
+      />
+      <Input
+        className={
+          Array [
+            "full-width",
+            undefined,
+          ]
+        }
+        data="name"
+        isError={false}
+        placeholder="enter email address"
+        type="text"
+        val="test@test.com"
+      />
+      <Button
+        data="name"
+        isError={false}
+        title="next"
+      />
+      <Disclaimer
+        disclaimerMessage="I agree to receive information from Discovery Communications in accordance with the following Privacy Policy"
+        isChecked={true}
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Test Form component Form renders properly when passed props 2`] = `
+<div
+  id="sign-up-form-wrapper"
+>
+  <div
+    className="name"
+    id="sign-up-form"
+  >
+    <Heading
+      headingType="h1"
+      message={
+        Array [
+          "Join the list",
+        ]
+      }
+    />
+    <div
+      id="sign-up-form-inner"
+    >
+      <Heading
+        headingType="h2"
+        message={
+          Array [
+            "Almost done! Please enter",
+            "your first and last name",
+          ]
+        }
+      />
+      <div
+        id="input-wrapper"
+      >
+        <Input
+          autoFocus={true}
+          className={
+            Array [
+              "half-width",
+              undefined,
+            ]
+          }
+          data="name"
+          isError={false}
+          placeholder="First Name"
+          val="Test"
+        />
+        <Input
+          className={
+            Array [
+              "half-width",
+              undefined,
+            ]
+          }
+          data="congrats"
+          isError={false}
+          placeholder="Last Name"
+          val="Test"
+        />
+      </div>
+      <Button
+        data="congrats"
+        isError={false}
+        title="sign up"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Test Form component Form renders properly when passed props 3`] = `
+<div
+  id="sign-up-form-wrapper"
+>
+  <div
+    className="congrats"
+    id="sign-up-form"
+  >
+    <Heading
+      headingType="h1"
+      message={
+        Array [
+          "Congratulations!",
+        ]
+      }
+    />
+    <div
+      id="sign-up-form-inner"
+    >
+      <Heading
+        headingType="h3"
+        message={
+          Array [
+            "Thank you for",
+            "signing up!",
+          ]
+        }
+      />
+      <Heading
+        headingType="h4"
+        message={
+          Array [
+            "Look out for the latest news on your favorite shows.",
+          ]
+        }
+      />
+    </div>
+  </div>
+</div>
+`;
