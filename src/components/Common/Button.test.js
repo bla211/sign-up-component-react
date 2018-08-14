@@ -7,7 +7,7 @@ import Button from './Button';
 configure({ adapter: new Adapter() });
 
 describe('Test Button component', () => {
-    test('Button renders {title}', () => {
+    test('Button renders properly when passed {title}', () => {
         const title = "Next";
         const wrapper = shallow(<Button title={title}/>);
         expect(wrapper).toMatchSnapshot();
