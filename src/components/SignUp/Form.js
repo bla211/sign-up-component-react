@@ -1,23 +1,29 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import PureForm from '../SignUp/PureForm';
 
 class Form extends Component {
     render(){
-        const { signUpState } = this.props;
-        const { updateEmail } = this.props;
+        const { signUpState, updateEmail, updateFirstName, updateLastName, toggleAgreesToDisclaimer, updateFormState, updateShowErrors } = this.props;
+
         return(
-            <div>
-                <input type='text' value={ signUpState.userInfo.email } />
-                <button onClick={ () => updateEmail('test@test.com') }>Next</button>
-            </div>
+            <PureForm signUpState={signUpState} updateEmail={updateEmail} updateFirstName={updateFirstName}
+                updateLastName={updateLastName} toggleAgreesToDisclaimer={toggleAgreesToDisclaimer} updateFormState={updateFormState}
+                updateShowErrors={updateShowErrors}
+            />
         )
     }
 
 }
 
 Form.propTypes = {
-    updateEmail: PropTypes.string,
+    updateEmail: PropTypes.func,
+    updateFirstName: PropTypes.func,
+    updateLastName: PropTypes.func,
+    updateFormState: PropTypes.func,
     signUpState: PropTypes.object,
+    toggleAgreesToDisclaimer: PropTypes.func,
+    updateShowErrors: PropTypes.func
   };
 
 export default Form;

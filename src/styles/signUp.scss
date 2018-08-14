@@ -1,0 +1,136 @@
+#sign-up-form-wrapper{
+    width: 100%;
+    float: left;
+    background: #131020;
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    #sign-up-form{
+        display: inline-block;
+        position: relative;
+        width: 100%;
+        @include breakpoint(mobile) {
+            max-width: 540px;
+        }
+        @include breakpoint(tablet-portrait) {
+            max-width: 540px;
+        }
+        @include breakpoint(tablet-landscape) {
+            max-width: 800px;
+        }
+        @include breakpoint(large) {
+            max-width: 1006px;
+        }
+        &.email{
+            @include breakpoint(mobile) {
+                padding: 20px 20px 35px 20px;
+            }
+            @include breakpoint(tablet-portrait) {
+                padding: 20px 0 35px 0;
+            }
+            @include breakpoint(tablet-landscape) {
+                padding: 47px 0 42px 0;
+            }
+            @include breakpoint(large) {
+                padding: 47px 0 42px 0;
+            }
+        }
+        &.name{
+            @include breakpoint(mobile) {
+                padding: 20px 20px 91px 20px;
+            }
+            @include breakpoint(tablet-portrait) {
+                padding: 20px 0 65px 0;
+            }
+            @include breakpoint(tablet-landscape) {
+                padding: 47px 0 72px 0;
+            }
+            @include breakpoint(large) {
+                padding: 47px 0 72px 0;
+            }
+        }
+        &.congrats{                    
+            @include breakpoint(mobile) {
+                padding: 68px 20px 68px 20px;
+            }
+            @include breakpoint(tablet-portrait) {
+                padding: 41px 20px 41px 20px;
+            }
+            @include breakpoint(tablet-landscape) {
+                padding: 68px 20px 68px 20px;
+            }
+            @include breakpoint(large) {
+                padding: 74px 20px 75px 20px;
+            }
+
+            #sign-up-form-inner{               
+                @include breakpoint(tablet-landscape) {
+                    width: calc(100% - 326px);
+                }
+                @include breakpoint(large) {
+                    width: calc(100% - 455px);
+                }  
+            }
+        }
+
+        #sign-up-form-inner{
+            @include breakpoint(mobile) {
+                width: 100%;
+                float: left;
+            }
+            @include breakpoint(tablet-portrait) {
+                width: 100%;
+                float: left;
+            }
+            @include breakpoint(tablet-landscape) {
+                width: calc(100% - 246px);
+                float: right;
+            }
+            @include breakpoint(large) {
+                width: calc(100% - 356px);
+                float: right;
+            }  
+        }
+
+        .error{
+            font-family: 'azo_sansregular';
+            float: left;
+            width: 100%;
+            color: red;
+            font-size: .75rem;
+            
+            @include breakpoint(mobile) {
+                margin: 13px 0 13px 0;
+            }
+            @include breakpoint(tablet-portrait) {
+                margin: 0 0 13px 0;
+            }
+        }
+
+        #disclaimer{
+            float: left;
+            margin-top: 10px;
+            @include breakpoint(mobile) {
+                width: 100%;
+                padding: 0 12px;
+            }
+            @include breakpoint(tablet-portrait) {
+                width: calc(100% - 170px);
+                padding: 0;
+                margin: 0;
+            }
+            .disclaimer-text{
+                float: left;
+                font-family: 'azo_sanslight';
+                color: #888888;
+                float: left;
+                font-size: .70rem;
+                line-height: 1rem;
+                padding: 0 0 0 22px;
+                margin: -2px 0 0 0;
+            }
+        }
+    }
+}

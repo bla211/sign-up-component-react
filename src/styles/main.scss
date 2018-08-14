@@ -20,7 +20,6 @@ time, mark, audio, video {
 	padding: 0;
 	border: 0;
 	font-size: 100%;
-	font: inherit;
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -30,6 +29,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+	font-size: 14px;
 }
 ol, ul {
 	list-style: none;
@@ -62,4 +62,56 @@ html {
 	visibility: hidden;
 }
 
+%line{
+	display: inline-block;
+	&:not(:first-child){
+		&::before {
+			content: "\00a0";
+		}
+	}
+}
+@mixin appearance($property){
+	-webkit-appearance: $property;
+	-moz-appearance:    $property;
+	appearance:         $property;
+}
+@mixin placeholder {
+	&::-webkit-input-placeholder {@content}
+	&:-moz-placeholder           {@content}
+	&::-moz-placeholder          {@content}
+	&:-ms-input-placeholder      {@content}  
+  } 
+@mixin transition($property...){
+	-webkit-transition: $property;
+	transition: $property;
+}
+
+@mixin breakpoint($point) {
+	@if $point == mobile {
+	  @media (min-width: 0px) { @content ; }
+   }
+	@else if $point == tablet-portrait {
+	  @media (min-width: 768px) { @content ; }
+   }
+	 @else if $point == tablet-landscape {
+	  @media (min-width: 1024px) { @content ; }
+   }
+	@else if $point == large {
+	  @media (min-width: 1440px)  { @content ; }
+   }
+ }
+
+$light-grey-blue: #94AEBF;
+$button-red: #ED1F34;
+
+
+
+
+
+
+
+@import 'Common/button';
+@import 'Common/checkbox';
+@import 'Common/heading';
+@import 'Common/input';
 @import 'signUp';

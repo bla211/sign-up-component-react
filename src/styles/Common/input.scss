@@ -1,0 +1,78 @@
+#input-wrapper{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    float: left;
+    @include breakpoint(mobile) {      
+        width: 100%;
+    }
+    @include breakpoint(tablet-portrait) {
+        width: calc(100% - 170px);
+    } 
+}
+
+%input {        
+    @include appearance(none);
+    @include transition(background 0.1s ease-in-out);
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 4px;
+    margin: 0 0 13px 0;
+    color: white;
+    font-family: 'azo_sansregular';
+    float: left;
+
+    @include breakpoint(mobile) {
+        font-size: 1rem;
+        padding: 12px 16px;
+        
+    }
+    @include breakpoint(tablet-portrait) {
+        font-size: 1.4rem;
+        padding: 10px 16px;
+    }
+    @include breakpoint(tablet-landscape) {
+    }
+    @include breakpoint(large) {
+    }
+
+    &:focus, &:hover{
+        outline: none;
+        background: #5a5865;
+    }
+    @include placeholder {
+        @include appearance(none);
+        font-family: 'azo_sansregular';
+        color: $light-grey-blue;
+        opacity: .4;
+
+        @include breakpoint(mobile) {
+            font-size: 1rem;
+        }
+        @include breakpoint(tablet-portrait) {
+            font-size: 1.5rem;
+        }
+        @include breakpoint(tablet-landscape) {
+        }
+        @include breakpoint(large) {
+        }
+    }
+    &.is-not-valid{
+        background: rgba(255,0,0,.2);
+    }
+}
+
+.full-width{
+    @extend %input;
+    @include breakpoint(mobile) {      
+        width: 100%;
+    }
+    @include breakpoint(tablet-portrait) {
+        width: calc(100% - 170px);
+    }  
+}
+
+.half-width{
+    @extend %input;
+    width: calc(50% - 5px);     
+}
