@@ -297,7 +297,7 @@ button {
   float: left; }
   @media (min-width: 0px) {
     #sign-up-form h2 {
-      font-size: 1rem;
+      font-size: 1.1rem;
       line-height: 1.25rem;
       margin-bottom: 10px;
       text-align: center; } }
