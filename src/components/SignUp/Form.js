@@ -71,11 +71,11 @@ class Form extends Component {
             input = <div id="input-wrapper">
                         <Input placeholder="First Name" className={ ["half-width", firstNameError] }
                             val={ signUpState.userInfo.name.first } handleChange={ updateFirstName } autoFocus={autoFocus}
-                            onclick={ updateFormState } data="name" isError={ isError } onError={ updateShowErrors } inputName="given-name"
+                            onclick={ updateFormState } data="name" isError={ isError } onError={ updateShowErrors } inputName="firstname"
                         />
                         <Input placeholder="Last Name" className={ ["half-width", lastNameError] }
                             val={ signUpState.userInfo.name.last } handleChange={ updateLastName }
-                            onclick={ updateFormState } data="congrats" isError={ isError } onError={ updateShowErrors } inputName="family-name"
+                            onclick={ updateFormState } data="congrats" isError={ isError } onError={ updateShowErrors } inputName="lastname"
                         />
                     </div>;
             button = <Button title="sign up" onclick={ updateFormState } data="congrats" isError={ isError } onError={ updateShowErrors }/>

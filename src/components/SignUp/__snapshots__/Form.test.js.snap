@@ -96,7 +96,7 @@ exports[`Test Form component Form renders properly when passed props 2`] = `
             ]
           }
           data="name"
-          inputName="given-name"
+          inputName="firstname"
           isError={false}
           placeholder="First Name"
           val="Test"
@@ -109,7 +109,7 @@ exports[`Test Form component Form renders properly when passed props 2`] = `
             ]
           }
           data="congrats"
-          inputName="family-name"
+          inputName="lastname"
           isError={false}
           placeholder="Last Name"
           val="Test"
